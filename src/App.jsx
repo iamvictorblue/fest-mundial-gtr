@@ -1,24 +1,34 @@
+import React from 'react';
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
-import FeatureSection from "./components/FeatureSection";
-import Workflow from "./components/Workflow";
+import Conciertos from "./components/Conciertos";
+import Simposios from "./components/Simposios";
+import ConciertoCierre from "./components/ConciertoCierre";
+import WorldGuitarCompetition from "./components/WorldGuitarCompetition";
 import Footer from "./components/Footer";
-import Pricing from "./components/Pricing";
-import Testimonials from "./components/Testimonials";
+import AnimatedSection from "./components/AnimatedSection";
 
 const App = () => {
   return (
-    <>
+    <div className="font-playfair">
       <Navbar />
-      <div className="max-w-7xl mx-auto pt-20 px-6">
+      <AnimatedSection id="home" className="bg-gradient-to-r from-yellow-100 to-orange-100">
         <HeroSection />
-        <FeatureSection />
-        <Workflow />
-        <Pricing />
-        <Testimonials />
-        <Footer />
-      </div>
-    </>
+      </AnimatedSection>
+      <AnimatedSection id="conciertos" className="bg-gradient-to-r from-blue-100 to-green-100">
+        <Conciertos />
+      </AnimatedSection>
+      <AnimatedSection id="simposios" className="bg-gradient-to-r from-purple-100 to-pink-100">
+        <Simposios />
+      </AnimatedSection>
+      <AnimatedSection id="cierre" className="bg-gradient-to-r from-green-100 to-blue-100">
+        <ConciertoCierre />
+      </AnimatedSection>
+      <AnimatedSection id="competition" className="bg-gradient-to-r from-red-100 to-yellow-100">
+        <WorldGuitarCompetition />
+      </AnimatedSection>
+      <Footer />
+    </div>
   );
 };
 

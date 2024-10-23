@@ -1,8 +1,32 @@
-# React + Vite
+# Festival Mundial de La Guitarra Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a website for the Festival Mundial de La Guitarra (World Guitar Festival), built using React and Vite.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run this project locally:
+
+1. Clone the repository
+2. Run `npm install` to install dependencies
+3. Run `npm run dev` to start the development server
+
+## Features
+
+- Information about the festival
+- Schedule of performances
+- Featured artists
+- Ticket purchasing
+
+## Technologies Used
+
+- React
+- Vite
+- Tailwind CSS
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
