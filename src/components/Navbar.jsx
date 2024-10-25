@@ -27,6 +27,7 @@ const Navbar = () => {
         { href: "#description", label: "Description" },
         { href: "#location", label: "Location" },
         { href: "#prizes", label: "Prizes" },
+        { href: "#required-piece", label: "Required Piece" },
         { href: "#preliminary-round", label: "Preliminary" },
         { href: "#final-stage", label: "Final" },
         { href: "#stipend", label: "Stipend" },
@@ -53,7 +54,7 @@ const Navbar = () => {
 
   return (
     <motion.nav 
-      className={`fixed w-full z-50 ${isCompetitionPage ? 'bg-[#498FC6]' : 'bg-[#E17055]'}`}
+      className={`fixed top-0 left-0 right-0 w-full z-50 ${isCompetitionPage ? 'bg-[#498FC6]' : 'bg-[#E17055]'}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 100, damping: 20 }}

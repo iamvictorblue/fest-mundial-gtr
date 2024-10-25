@@ -7,6 +7,10 @@ module.exports = {
         sans: ['Montserrat', 'sans-serif'],
         script: ['Dancing Script', 'cursive'],
         display: ['Oswald', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+        'space-grotesk': ['Space Grotesk', 'sans-serif'],
+        'work-sans': ['Work Sans', 'sans-serif'],
+        'chunky': ['Roboto', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 1s ease-out forwards',

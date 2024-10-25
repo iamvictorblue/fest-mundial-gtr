@@ -7,6 +7,8 @@ import juryImage1 from "../assets/jury-image.png";
 import juryImage2 from "../assets/jury-image-2.png";
 import juryImage3 from "../assets/jury-image-3.png";
 import joseAntonioLopezImage from "../assets/jose-antonio-lopez.png";
+import joseAntonioLopezHeroImage from "../assets/fest copy.png"; // Make sure to add this image to your assets
+import StarfieldBackground from './StarfieldBackground';
 
 // AnimateOnScroll component
 const AnimateOnScroll = ({ children, animation }) => {
@@ -71,29 +73,47 @@ const scaleIn = {
 
 const WorldGuitarCompetitionPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-100 to-white">
-      <div className="max-w-7xl mx-auto py-24 px-6 space-y-24">
+    <div className="min-h-screen font-inter relative text-white">
+      <StarfieldBackground />
+      <div className="max-w-7xl mx-auto py-24 px-6 space-y-24 relative z-10">
         {/* Hero Section */}
         <AnimateOnScroll animation={fadeInUp}>
-          <section className="text-center">
-            <motion.h1 
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-[#498FC6] font-script"
+          <section className="text-center bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-sm p-8 rounded-lg shadow-lg section-padding" id="hero">
+            <motion.div
+              className="w-full max-w-md mx-auto mb-6"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              José Antonio López
-            </motion.h1>
+              <img
+                src={joseAntonioLopezHeroImage}
+                alt="José Antonio López World Guitar Competition"
+                className="w-full h-auto object-contain"
+              />
+            </motion.div>
             <motion.h2 
-              className="text-3xl sm:text-4xl lg:text-5xl mb-12 font-display font-bold tracking-wider"
+              className="text-5xl sm:text-6xl lg:text-7xl mb-12 font-black tracking-wider relative z-10"
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
+              style={{
+                color: 'white',
+                WebkitTextStroke: '3px #498FC6',
+                textShadow: `
+                  4px 4px 0 #498FC6,
+                  -1px -1px 0 #498FC6,  
+                  1px -1px 0 #498FC6,
+                  -1px 1px 0 #498FC6,
+                  1px 1px 0 #498FC6
+                `,
+              }}
             >
-              WORLD GUITAR COMPETITION
+              WORLD GUITAR
+              <br />
+              COMPETITION
             </motion.h2>
             <motion.h3
-              className="text-2xl mb-12 font-sans"
+              className="text-2xl mb-12 font-work-sans"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -106,7 +126,8 @@ const WorldGuitarCompetitionPage = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <div className="w-full md:w-1/2 aspect-w-16 aspect-h-9">
+              {/* YouTube Video - Now larger */}
+              <div className="w-full md:w-3/5 aspect-video"> {/* Changed from w-1/2 to w-3/5 */}
                 <iframe 
                   className="w-full h-full rounded-lg shadow-lg"
                   src="https://www.youtube.com/embed/4ys2KLiY574" 
@@ -116,7 +137,9 @@ const WorldGuitarCompetitionPage = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-              <div className="w-full md:w-1/2">
+              
+              {/* Competition Poster - Now smaller */}
+              <div className="w-full md:w-2/6"> {/* Changed from w-1/2 to w-2/5 */}
                 <img 
                   src={competitionImage} 
                   alt="World Guitar Competition Poster" 
@@ -129,30 +152,30 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Description Section */}
         <AnimateOnScroll animation={fadeInLeft}>
-          <section id="description" className="mb-16 bg-gradient-to-r from-yellow-100 to-orange-100 p-8 rounded-lg shadow-lg">
-            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-display">Description</h2>
-            <p className="text-lg mb-4 font-sans">
+          <section id="description" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">Description</h2>
+            <p className="text-lg mb-4 font-work-sans">
               The aim of the José Antonio López World Guitar Competition is to reward artistic expression and
               musicality in classical guitar performance.
             </p>
-            <p className="text-lg mb-4 font-sans">
+            <p className="text-lg mb-4 font-work-sans">
               With $18,000 in prizes, the competition invites guitarists from around the world to revive the
               interpretative styles evoked by legendary figures such as Julian Bream (England), Alirio Díaz
               (Venezuela), and Leonardo Egúrbida (Puerto Rico). This competition encourages guitarists
               worldwide to bring back the lyricism and tonal colors that make classical guitar unique.
             </p>
-            <p className="text-lg mb-4 font-sans">
+            <p className="text-lg mb-4 font-work-sans">
               The competition will be held as part of the World Guitar Festival, an event dedicated to the guitar,
               featuring the most important luthiers in the world. Participants will include Andrea Tacchi (Italy),
               Gerhard Oldiges (Germany), Gerardo Escobedo (Mexico), Alberto Martínez from Orfeo Magazine
               (Uruguay/Paris), and the collector José Luis Postigo (Seville, Spain).
             </p>
-            <p className="text-lg mb-4 font-sans">
+            <p className="text-lg mb-4 font-work-sans">
               The featured concerts will be performed by Yamandú Costa (Croatia) and Leonela Alejandro
               (Puerto Rico). In addition, two Café Concerts, titled "Guitar Tasting," will be offered, featuring
               virtuosos Iván Rijos (Puerto Rico) and Marcus Toscano (Brazil).
             </p>
-            <p className="text-lg font-sans">
+            <p className="text-lg font-work-sans">
               The event will conclude with the Gustavo and Beatriz Arvelo National Guitar Competition, where
               the audience will enjoy the most talented young Puerto Rican guitarists between the ages of 10
               and 18. A series of masterclasses by guest artists will complement this grand international
@@ -163,13 +186,13 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Location Section */}
         <AnimateOnScroll animation={fadeInRight}>
-          <section id="location" className="mb-16 bg-gradient-to-r from-green-100 to-blue-100 p-8 rounded-lg shadow-lg">
-            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-display">Location</h2>
-            <p className="text-lg font-sans">
+          <section id="location" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">Location</h2>
+            <p className="text-lg font-work-sans">
               The José Antonio López World Guitar Competition will be held at the Symphonic Hall, San Juan,
               Puerto Rico.
             </p>
-            <p className="text-lg mt-4 font-sans">
+            <p className="text-lg mt-4 font-work-sans">
               <strong>Date:</strong> Sunday, May 4, 2025.
             </p>
           </section>
@@ -177,9 +200,9 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Prizes Section */}
         <AnimateOnScroll animation={scaleIn}>
-          <section id="prizes" className="mb-16 bg-gradient-to-r from-purple-100 to-pink-100 p-8 rounded-lg shadow-lg">
-            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-display">Prizes</h2>
-            <ul className="space-y-4 text-lg font-sans">
+          <section id="prizes" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">Prizes</h2>
+            <ul className="space-y-4 text-lg font-work-sans">
               <li className="flex items-center">
                 <span className="text-3xl font-bold text-yellow-500 mr-4">1st Place</span>
                 <span>$7,000</span>
@@ -207,9 +230,9 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Required Piece Section */}
         <AnimateOnScroll animation={fadeInLeft}>
-          <section id="required-piece" className="mb-16 bg-gradient-to-r from-red-100 to-yellow-100 p-8 rounded-lg shadow-lg">
-            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-display">Required Piece</h2>
-            <p className="text-lg mb-4 font-sans">
+          <section id="required-piece" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">Required Piece</h2>
+            <p className="text-lg mb-4 font-work-sans">
               The competition requires each contestant to perform the piece &quot;Guitarra Poética&quot; (Homage to
               Manuel Bellido) by Puerto Rican composer José Antonio López. The PDF score, audio sample,
               and several YouTube videos are available for download below.
@@ -245,9 +268,9 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Age Section */}
         <AnimateOnScroll animation={fadeInRight}>
-          <section id="age" className="mb-16 bg-gradient-to-r from-blue-100 to-green-100 p-8 rounded-lg shadow-lg">
-            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-display">Age</h2>
-            <p className="text-lg font-sans">
+          <section id="age" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">Age</h2>
+            <p className="text-lg font-work-sans">
               The José Antonio López World Guitar Competition is an open category event with no age limit for
               participation.
             </p>
@@ -256,18 +279,18 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Preliminary Round Section */}
         <AnimateOnScroll animation={fadeInUp}>
-          <section id="preliminary-round" className="mb-16 bg-gradient-to-r from-indigo-100 to-purple-100 p-8 rounded-lg shadow-lg">
-            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-display">Preliminary Round</h2>
-            <p className="text-lg mb-4 font-sans">
+          <section id="preliminary-round" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">Preliminary Round</h2>
+            <p className="text-lg mb-4 font-work-sans">
               The José Antonio López World Guitar Competition requires an initial elimination phase, which
               will consist of the performance of the required piece titled "Guitarra Poética." This performance
               must be submitted via a YouTube video no later than March 30, 2025.
             </p>
-            <p className="text-lg mb-4 font-sans">
+            <p className="text-lg mb-4 font-work-sans">
               In the video, each contestant must include a personal introduction before the performance, stating
               their full name, country of origin, the name of the competition, and the title of the piece.
             </p>
-            <p className="text-lg mb-4 font-sans">
+            <p className="text-lg mb-4 font-work-sans">
               Along with the video, participants must submit the registration form, which can be downloaded
               from our website, accompanied by the video link. Both, the video link and the registration form
               should be sent to the following email address: jalwgc@gmail.com
@@ -278,13 +301,13 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Final Stage Section */}
         <AnimateOnScroll animation={scaleIn}>
-          <section id="final-stage" className="mb-16 bg-gradient-to-r from-yellow-100 to-green-100 p-8 rounded-lg shadow-lg">
-            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-display">Final Stage</h2>
-            <p className="text-lg mb-4 font-sans">
+          <section id="final-stage" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">Final Stage</h2>
+            <p className="text-lg mb-4 font-work-sans">
               The final stage of the José Antonio López World Guitar Competition will be held in person on May
               4, 2025, at the Symphonic Hall in San Juan, Puerto Rico.
             </p>
-            <p className="text-lg font-sans">
+            <p className="text-lg font-work-sans">
               In the first round of the final stage, the three finalists, selected in alphabetical order, will perform
               the required piece, "Guitarra Poética" by José Antonio López. In the second round, the finalists
               will present a free repertoire with a duration of 20 minutes. (The selection of the repertoire and the
@@ -295,22 +318,22 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Stipend Section */}
         <AnimateOnScroll animation={fadeInLeft}>
-          <section id="stipend" className="mb-16 bg-gradient-to-r from-pink-100 to-purple-100 p-8 rounded-lg shadow-lg">
-            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-display">Stipend for Finalists</h2>
+          <section id="stipend" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">Stipend for Finalists</h2>
             <h3 className="text-2xl font-semibold mb-4">Flights</h3>
-            <p className="text-lg mb-4 font-sans">
+            <p className="text-lg mb-4 font-work-sans">
               The three selected finalists will receive a $500 stipend to help cover their flight expenses. It is
               important to note that, as Puerto Rico is a U.S. territory, each contestant must ensure they meet the
               necessary visa requirements to enter U.S. territory.
             </p>
-            <p className="text-lg mb-4 font-sans">
+            <p className="text-lg mb-4 font-work-sans">
               When purchasing airline tickets, we recommend flying into either San Juan Airport or Aguadilla
               Airport. San Juan Airport is two and a half hours from Mayagüez, while Aguadilla Airport is 45
               minutes from the city. San Juan receives daily flights from various parts of the U.S. and also direct
               flights from Europe. Aguadilla offers direct flights from New York and Orlando, Florida.
             </p>
             <h3 className="text-2xl font-semibold mb-4">Hotel and Transportation</h3>
-            <p className="text-lg font-sans">
+            <p className="text-lg font-work-sans">
               The José Antonio López World Guitar Competition will provide three nights of accommodation
               for the three finalists, as well as internal transportation. Additionally, the day after the competition,
               we will organize a trip to the beautiful beaches of Puerto Rico for all participants of the World
@@ -321,8 +344,8 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Jury Section */}
         <AnimateOnScroll animation={fadeInRight}>
-          <section id="jury" className="mb-16 bg-gradient-to-r from-blue-100 to-indigo-100 p-8 rounded-lg shadow-lg">
-            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-display">International Jury</h2>
+          <section id="jury" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">International Jury</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               <motion.img 
                 src={juryImage1} 
@@ -346,14 +369,14 @@ const WorldGuitarCompetitionPage = () => {
                 transition={{ duration: 0.3 }}
               />
             </div>
-            <p className="text-lg mb-4 font-sans">
+            <p className="text-lg mb-4 font-work-sans">
               The José Antonio López World Guitar Competition has selected renowned artists from the
               international music scene as members of the jury. The distinguished jury members lending prestige
               to the competition are: Sergio Assad (Brazil), Pablo and Alberto Martos Lozano (Spain), Alfredo
               Minetti (Uruguay), and Richard Scofano (Argentina). It is important to note that they will be
               following the competition from their respective countries via the live broadcast on YouTube.
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-lg font-sans">
+            <ul className="list-disc pl-5 space-y-2 text-lg font-work-sans">
               <li>Composer Sergio Assad, president of the Jury.</li>
               <li>Cellist Alberto Martos and violinist Pablo Martos (Spain)</li>
               <li>Alfredo Minetti, pianist (Uruguay), and composer and bandoneonist Richard Scofano
@@ -364,8 +387,8 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* José Antonio López Section */}
         <AnimateOnScroll animation={scaleIn}>
-          <section id="jose-antonio-lopez" className="mb-16 bg-gradient-to-r from-green-100 to-yellow-100 p-8 rounded-lg shadow-lg">
-            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-display">José Antonio López</h2>
+          <section id="jose-antonio-lopez" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+            <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">José Antonio López</h2>
             <div className="float-right ml-6 mb-6">
               <motion.img 
                 src={joseAntonioLopezImage} 
@@ -375,20 +398,20 @@ const WorldGuitarCompetitionPage = () => {
                 transition={{ duration: 0.3 }}
               />
             </div>
-            <p className="text-lg mb-4 font-sans">
+            <p className="text-lg mb-4 font-work-sans">
               Retired guitarist and composer José Antonio López holds a doctorate
               from the prestigious Indiana University School of Music, a Master&apos;s
               degree from Arizona State University, and a Bachelor&apos;s degree from the
               Conservatory of Music of Puerto Rico.
             </p>
-            <p className="text-lg mb-4 font-sans">
+            <p className="text-lg mb-4 font-work-sans">
               With a successful career spanning more than 30 years as a guitar soloist,
               his performances with major symphony orchestras across the
               hemisphere stand out. Through his Centro de Estudios Guitarrísticos in
               Puerto Rico, he has trained an entire generation of virtuoso guitarists
               who now dominate the contemporary Puerto Rican guitar scene.
             </p>
-            <p className="text-lg mb-4 font-sans">
+            <p className="text-lg mb-4 font-work-sans">
               Moreover, as a professor and researcher at the University of Puerto Rico
               at Mayagüez, he has contributed to an extensive discography and
               numerous publications focused on concert guitar and the bolero genre,
@@ -396,7 +419,7 @@ const WorldGuitarCompetitionPage = () => {
               the trio Los Tres Ases, which will be accompanied by a documentary
               film.
             </p>
-            <p className="text-lg font-sans">
+            <p className="text-lg font-work-sans">
               He is currently enjoying his retirement from performing and teaching,
               dedicating his time entirely to composition and traveling the world in
               search of his dream guitar.
