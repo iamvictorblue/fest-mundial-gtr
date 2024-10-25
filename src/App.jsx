@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Conciertos from "./components/Conciertos";
@@ -15,7 +15,9 @@ const App = () => {
     <div className="font-playfair">
       <Navbar />
       <Routes>
-        <Route path="/" element={
+        <Route path="/" element={<Navigate to="/world-guitar-competition" replace />} />
+        <Route path="/world-guitar-competition" element={<WorldGuitarCompetitionPage />} />
+        <Route path="/festival" element={
           <>
             <AnimatedSection id="home" className="bg-gradient-to-r from-yellow-100 to-orange-100">
               <HeroSection />
@@ -34,7 +36,6 @@ const App = () => {
             </AnimatedSection>
           </>
         } />
-        <Route path="/world-guitar-competition" element={<WorldGuitarCompetitionPage />} />
       </Routes>
       <Footer />
     </div>
