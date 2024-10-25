@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <footer className="mt-20 py-10 bg-white text-gray-800">
       <div className="container mx-auto px-4 text-center">
-        <h3 className="text-lg font-semibold mb-2">Festival Mundial de La Guitarra</h3>
-        <p className="text-sm text-gray-600 mb-4">Celebrando la excelencia de la guitarra desde [Año]</p>
+        <h3 className="text-lg font-semibold mb-2">World Guitar Competition</h3>
+        <p className="text-sm text-gray-600 mb-4">Celebrando la excelencia de la guitarra.</p>
         <div className="mb-4">
           <p className="text-sm text-gray-600">Email: info@festivalmundialdelaguitarra.com</p>
           <p className="text-sm text-gray-600">Teléfono: +[Número de Teléfono]</p>

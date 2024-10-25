@@ -9,6 +9,7 @@ import juryImage3 from "../assets/jury-image-3.png";
 import joseAntonioLopezImage from "../assets/jose-antonio-lopez.png";
 import joseAntonioLopezHeroImage from "../assets/fest copy.png"; // Make sure to add this image to your assets
 import StarfieldBackground from './StarfieldBackground';
+import ParticleAnimation from './ParticleAnimation';
 
 // AnimateOnScroll component
 const AnimateOnScroll = ({ children, animation }) => {
@@ -74,11 +75,12 @@ const scaleIn = {
 const WorldGuitarCompetitionPage = () => {
   return (
     <div className="min-h-screen font-inter relative text-white">
+      <ParticleAnimation />
       <StarfieldBackground />
       <div className="max-w-7xl mx-auto py-24 px-6 space-y-24 relative z-10">
         {/* Hero Section */}
         <AnimateOnScroll animation={fadeInUp}>
-          <section className="text-center bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-sm p-8 rounded-lg shadow-lg section-padding" id="hero">
+          <section className="text-center bg-gradient-to-br from-blue-900 to-indigo-900 bg-opacity-80 backdrop-filter backdrop-blur-sm p-8 rounded-lg shadow-lg section-padding" id="hero">
             <motion.div
               className="w-full max-w-md mx-auto mb-6"
               initial={{ opacity: 0, y: -50 }}
@@ -152,7 +154,7 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Description Section */}
         <AnimateOnScroll animation={fadeInLeft}>
-          <section id="description" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+          <section id="description" className="mb-16 bg-gradient-to-br from-purple-900 to-pink-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
             <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">Description</h2>
             <p className="text-lg mb-4 font-work-sans">
               The aim of the José Antonio López World Guitar Competition is to reward artistic expression and
@@ -186,7 +188,7 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Location Section */}
         <AnimateOnScroll animation={fadeInRight}>
-          <section id="location" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+          <section id="location" className="mb-16 bg-gradient-to-br from-green-900 to-teal-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
             <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">Location</h2>
             <p className="text-lg font-work-sans">
               The José Antonio López World Guitar Competition will be held at the Symphonic Hall, San Juan,
@@ -200,7 +202,7 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Prizes Section */}
         <AnimateOnScroll animation={scaleIn}>
-          <section id="prizes" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+          <section id="prizes" className="mb-16 bg-gradient-to-br from-red-900 to-orange-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
             <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">Prizes</h2>
             <ul className="space-y-4 text-lg font-work-sans">
               <li className="flex items-center">
@@ -230,35 +232,33 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Required Piece Section */}
         <AnimateOnScroll animation={fadeInLeft}>
-          <section id="required-piece" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+          <section id="required-piece" className="mb-16 bg-gradient-to-br from-yellow-900 to-amber-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
             <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">Required Piece</h2>
             <p className="text-lg mb-4 font-work-sans">
               The competition requires each contestant to perform the piece &quot;Guitarra Poética&quot; (Homage to
               Manuel Bellido) by Puerto Rican composer José Antonio López. The PDF score, audio sample,
               and several YouTube videos are available for download below.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-wrap justify-center gap-4 mt-6">
               <a 
                 href="/path-to-your-score.pdf" 
                 download="Guitarra_Poetica_Score.pdf"
-                className="inline-block bg-[#498FC6] text-white py-2 px-4 rounded-md hover:bg-[#498FC6] transition-colors text-center"
+                className="inline-block bg-[#498FC6] text-white py-3 px-6 rounded-full hover:bg-[#3A7CAE] transition-colors text-center font-semibold shadow-md hover:shadow-lg"
               >
                 Download Score (PDF)
               </a>
               <a 
                 href="/path-to-your-audio.mp3" 
                 download="Guitarra_Poetica_Audio.mp3"
-                className="inline-block bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors text-center"
+                className="inline-block bg-green-600 text-white py-3 px-6 rounded-full hover:bg-green-700 transition-colors text-center font-semibold shadow-md hover:shadow-lg"
               >
                 Download Audio Sample (MP3)
               </a>
-            </div>
-            <div className="mt-4">
               <a 
                 href="https://www.youtube.com/watch?v=your-video-id" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-block bg-[#498FC6] text-white py-2 px-4 rounded-md hover:bg-[#498FC6] transition-colors text-center"
+                className="inline-block bg-red-600 text-white py-3 px-6 rounded-full hover:bg-red-700 transition-colors text-center font-semibold shadow-md hover:shadow-lg"
               >
                 Watch on YouTube
               </a>
@@ -344,50 +344,66 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Jury Section */}
         <AnimateOnScroll animation={fadeInRight}>
-          <section id="jury" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+          <section id="jury" className="mb-16 bg-gradient-to-br from-indigo-900 to-purple-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
             <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">International Jury</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <motion.img 
-                src={juryImage1} 
-                alt="International Jury 1" 
-                className="w-full rounded-lg shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              />
-              <motion.img 
-                src={juryImage2} 
-                alt="International Jury 2" 
-                className="w-full rounded-lg shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              />
-              <motion.img 
-                src={juryImage3} 
-                alt="International Jury 3" 
-                className="w-full rounded-lg shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              />
+              <div className="flex flex-col items-center">
+                <motion.div 
+                  className="w-full aspect-square overflow-hidden rounded-lg shadow-lg mb-4"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img 
+                    src={juryImage1} 
+                    alt="Sergio Assad" 
+                    className="w-full h-full object-cover object-center"
+                  />
+                </motion.div>
+                <h3 className="text-xl font-semibold text-center">Composer Sergio Assad</h3>
+                <p className="text-center text-gray-300">President of the Jury</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <motion.div 
+                  className="w-full aspect-square overflow-hidden rounded-lg shadow-lg mb-4"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img 
+                    src={juryImage2} 
+                    alt="Alberto and Pablo Martos" 
+                    className="w-full h-full object-cover object-center"
+                  />
+                </motion.div>
+                <h3 className="text-xl font-semibold text-center">Alberto and Pablo Martos</h3>
+                <p className="text-center text-gray-300">Cellist and Violinist (Spain)</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <motion.div 
+                  className="w-full aspect-square overflow-hidden rounded-lg shadow-lg mb-4"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img 
+                    src={juryImage3} 
+                    alt="Alfredo Minetti and Richard Scofano" 
+                    className="w-full h-full object-cover object-center"
+                  />
+                </motion.div>
+                <h3 className="text-xl font-semibold text-center">Alfredo Minetti and Richard Scofano</h3>
+                <p className="text-center text-gray-300">Pianist (Uruguay) and Composer/Bandoneonist (Argentina)</p>
+              </div>
             </div>
             <p className="text-lg mb-4 font-work-sans">
               The José Antonio López World Guitar Competition has selected renowned artists from the
-              international music scene as members of the jury. The distinguished jury members lending prestige
-              to the competition are: Sergio Assad (Brazil), Pablo and Alberto Martos Lozano (Spain), Alfredo
-              Minetti (Uruguay), and Richard Scofano (Argentina). It is important to note that they will be
-              following the competition from their respective countries via the live broadcast on YouTube.
+              international music scene as members of the jury. These distinguished jury members lend prestige
+              to the competition and will be following the performances from their respective countries via live broadcast on YouTube.
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-lg font-work-sans">
-              <li>Composer Sergio Assad, president of the Jury.</li>
-              <li>Cellist Alberto Martos and violinist Pablo Martos (Spain)</li>
-              <li>Alfredo Minetti, pianist (Uruguay), and composer and bandoneonist Richard Scofano
-              (Argentina).</li>
-            </ul>
           </section>
         </AnimateOnScroll>
 
         {/* José Antonio López Section */}
         <AnimateOnScroll animation={scaleIn}>
-          <section id="jose-antonio-lopez" className="mb-16 bg-gray-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
+          <section id="jose-antonio-lopez" className="mb-16 bg-gradient-to-br from-gray-900 to-blue-900 bg-opacity-80 text-white p-8 rounded-lg shadow-lg section-padding">
             <h2 className="text-4xl font-bold mb-6 text-[#498FC6] font-space-grotesk">José Antonio López</h2>
             <div className="float-right ml-6 mb-6">
               <motion.img 
