@@ -4,7 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'playfair': ['"Playfair Display"', 'serif'],
+        sans: ['Montserrat', 'sans-serif'],
+        script: ['Dancing Script', 'cursive'],
+        display: ['Oswald', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 1s ease-out forwards',
@@ -14,6 +16,9 @@ module.exports = {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+      },
+      colors: {
+        'competition-blue': '#498FC6',
       },
     },
   },
