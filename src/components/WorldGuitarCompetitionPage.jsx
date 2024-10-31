@@ -252,8 +252,26 @@ const WorldGuitarCompetitionPage = () => {
               method="POST" 
               className="max-w-2xl mx-auto mb-8 bg-black/30 p-6 rounded-lg"
               data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/success"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const form = e.target;
+                fetch("/", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                  body: new URLSearchParams(new FormData(form)).toString(),
+                })
+                  .then(() => {
+                    alert("Form submitted successfully! You can now access the downloads.");
+                  })
+                  .catch((error) => {
+                    alert("Error submitting form! Please try again.");
+                  });
+              }}
             >
               <input type="hidden" name="form-name" value="score-download" />
+              <input type="hidden" name="bot-field" />
               
               <h3 className="text-2xl font-bold text-[#498FC6] mb-6">Please fill out this form to access the downloads</h3>
               <div className="space-y-4">
