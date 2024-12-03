@@ -8,7 +8,6 @@ import juryImage2 from "../assets/jury-image-2.png";
 import juryImage3 from "../assets/jury-image-3.png";
 import joseAntonioLopezImage from "../assets/jose-antonio-lopez.png";
 import StarfieldBackground from './StarfieldBackground';
-import ParticleAnimation from './ParticleAnimation';
 import festLogo from "../assets/fest copy.png";
 import beachImage from "../assets/beach-image.png";
 import aerialBeachImage from "../assets/aerial-beach-image.png";
@@ -21,24 +20,28 @@ const AnimateOnScroll = ({ children, animation }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 }
+      { 
+        threshold: 0.1,
+        rootMargin: '50px'
+      }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, [isVisible]);
 
   return (
     <motion.div
@@ -46,7 +49,7 @@ const AnimateOnScroll = ({ children, animation }) => {
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
       variants={animation}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.3 }}
     >
       {children}
     </motion.div>
@@ -55,22 +58,22 @@ const AnimateOnScroll = ({ children, animation }) => {
 
 // Animation variants
 const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 5 },
   visible: { opacity: 1, y: 0 }
 };
 
 const fadeInLeft = {
-  hidden: { opacity: 0, x: -50 },
+  hidden: { opacity: 0, x: -10 },
   visible: { opacity: 1, x: 0 }
 };
 
 const fadeInRight = {
-  hidden: { opacity: 0, x: 50 },
+  hidden: { opacity: 0, x: 10 },
   visible: { opacity: 1, x: 0 }
 };
 
 const scaleIn = {
-  hidden: { opacity: 0, scale: 0.8 },
+  hidden: { opacity: 0, scale: 0.95 },
   visible: { opacity: 1, scale: 1 }
 };
 
@@ -117,12 +120,11 @@ const styles = {
 const WorldGuitarCompetitionPage = () => {
   return (
     <div className="min-h-screen font-manrope-regular relative text-white text-base">
-      <ParticleAnimation />
       <StarfieldBackground />
       <div className="max-w-6xl mx-auto py-24 px-6 space-y-24 relative z-10">
         {/* Hero Section - Full width and centered */}
         <AnimateOnScroll animation={fadeInUp}>
-          <section className="text-center bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-8 rounded-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300 max-w-2xl mx-auto" id="hero">
+          <section className="text-center bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-8 rounded-2xl shadow-2xl section-padding transform hover:scale-[1.01] transition-all duration-200 max-w-2xl mx-auto" id="hero">
             <motion.div 
               className="max-w-2xl mx-auto"
               initial={{ opacity: 0, x: -50 }}
@@ -154,7 +156,7 @@ const WorldGuitarCompetitionPage = () => {
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
-                border-b-2 border-white/30 pb-2 uppercase w-full">Description</h2>
+                border-b-2 border-white/30 pb-2 uppercase w-full">Welcome</h2>
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">

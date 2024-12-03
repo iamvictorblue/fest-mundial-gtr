@@ -23,7 +23,7 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { href: "#description", label: "Description" },
+    { href: "#description", label: "Welcome" },
     { href: "#location", label: "Location" },
     { href: "#prizes", label: "Prizes" },
     { href: "#required-piece", label: "Set Piece" },

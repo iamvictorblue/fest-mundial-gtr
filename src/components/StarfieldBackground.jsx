@@ -7,8 +7,8 @@ import beachImage from "../assets/beach-image.png";
 function StarField(props) {
   const ref = useRef()
   const [sphere] = React.useState(() => {
-    const sphere = new Float32Array(2000 * 3)
-    for (let i = 0; i < 2000; i++) {
+    const sphere = new Float32Array(500 * 3)
+    for (let i = 0; i < 500; i++) {
       const theta = THREE.MathUtils.randFloatSpread(360) 
       const phi = THREE.MathUtils.randFloatSpread(360) 
       sphere[i * 3] = 50 * Math.sin(theta) * Math.cos(phi)
@@ -19,31 +19,15 @@ function StarField(props) {
   })
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 15
-    ref.current.rotation.y -= delta / 20
+    if (ref.current) {
+      ref.current.rotation.x -= delta / 60
+      ref.current.rotation.y -= delta / 80
+    }
   })
 
   return (
-    <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
-        <PointMaterial
-          transparent
-          color="#B7DAD6"
-          size={0.05}
-          sizeAttenuation={true}
-          depthWrite={false}
-        />
-      </Points>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
-        <PointMaterial
-          transparent
-          color="#73D0EB"
-          size={0.04}
-          sizeAttenuation={true}
-          depthWrite={false}
-        />
-      </Points>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
+    <group>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled={true} {...props}>
         <PointMaterial
           transparent
           color="#498FC6"
@@ -65,11 +49,8 @@ export default function StarfieldBackground() {
       top: 0, 
       left: 0, 
       zIndex: -1, 
-      background: `linear-gradient(to bottom, rgb(115,208,235), rgb(183,218,214)), url(${beachImage})`,
-      backgroundBlendMode: 'overlay',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      opacity: 0.3,
+      background: `linear-gradient(to bottom, rgb(115,208,235), rgb(183,218,214))`,
+      opacity: 0.7,
     }}>
       <div style={{
         position: 'absolute',
@@ -83,7 +64,11 @@ export default function StarfieldBackground() {
         opacity: 0.1,
         mixBlendMode: 'overlay',
       }} />
-      <Canvas camera={{ position: [0, 0, 1] }}>
+      <Canvas 
+        camera={{ position: [0, 0, 1] }}
+        style={{ position: 'fixed' }}
+        dpr={[1, 1.5]}
+      >
         <StarField />
       </Canvas>
     </div>
