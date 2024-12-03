@@ -6,8 +6,8 @@ import * as THREE from 'three'
 function StarField(props) {
   const ref = useRef()
   const [sphere] = React.useState(() => {
-    const sphere = new Float32Array(5000 * 3)
-    for (let i = 0; i < 5000; i++) {
+    const sphere = new Float32Array(2000 * 3)
+    for (let i = 0; i < 2000; i++) {
       const theta = THREE.MathUtils.randFloatSpread(360) 
       const phi = THREE.MathUtils.randFloatSpread(360) 
       sphere[i * 3] = 50 * Math.sin(theta) * Math.cos(phi)
@@ -18,8 +18,8 @@ function StarField(props) {
   })
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10
-    ref.current.rotation.y -= delta / 15
+    ref.current.rotation.x -= delta / 15
+    ref.current.rotation.y -= delta / 20
   })
 
   return (
@@ -27,8 +27,26 @@ function StarField(props) {
       <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
         <PointMaterial
           transparent
-          color="#ffffff"
-          size={0.002}
+          color="#B7DAD6"
+          size={0.05}
+          sizeAttenuation={true}
+          depthWrite={false}
+        />
+      </Points>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
+        <PointMaterial
+          transparent
+          color="#73D0EB"
+          size={0.04}
+          sizeAttenuation={true}
+          depthWrite={false}
+        />
+      </Points>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
+        <PointMaterial
+          transparent
+          color="#498FC6"
+          size={0.03}
           sizeAttenuation={true}
           depthWrite={false}
         />

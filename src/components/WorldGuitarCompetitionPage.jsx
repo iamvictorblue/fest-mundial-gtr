@@ -7,10 +7,11 @@ import juryImage1 from "../assets/jury-image.png";
 import juryImage2 from "../assets/jury-image-2.png";
 import juryImage3 from "../assets/jury-image-3.png";
 import joseAntonioLopezImage from "../assets/jose-antonio-lopez.png";
-import joseAntonioLopezHeroImage from "../assets/fest copy.png"; // Make sure to add this image to your assets
 import StarfieldBackground from './StarfieldBackground';
 import ParticleAnimation from './ParticleAnimation';
 import festLogo from "../assets/fest copy.png";
+import beachImage from "../assets/beach-image.png";
+import aerialBeachImage from "../assets/aerial-beach-image.png";
 
 // AnimateOnScroll component
 const AnimateOnScroll = ({ children, animation }) => {
@@ -121,7 +122,7 @@ const WorldGuitarCompetitionPage = () => {
       <div className="max-w-7xl mx-auto py-24 px-6 space-y-24 relative z-10">
         {/* Hero Section - Full width and centered */}
         <AnimateOnScroll animation={fadeInUp}>
-          <section className="text-center bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-8 rounded-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300 max-w-4xl mx-auto" id="hero">
+          <section className="text-center bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-8 rounded-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300 max-w-2xl mx-auto" id="hero">
             <motion.div 
               className="max-w-2xl mx-auto"
               initial={{ opacity: 0, x: -50 }}
@@ -139,11 +140,21 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Description Section - Offset to the right */}
         <AnimateOnScroll animation={fadeInLeft}>
-          <section id="description" className="ml-auto mr-0 max-w-3xl bg-[rgb(183,218,214)]/80 backdrop-blur-xl px-8 py-10 rounded-l-2xl shadow-2xl section-padding">
-            <div className="flex flex-col items-center gap-4 mb-8">
-              <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-2xl md:text-3xl font-[700] text-black text-center
-                font-['Playfair_Display'] tracking-wide">Description</h2>
+          <section 
+            id="description" 
+            className="ml-auto mr-0 max-w-3xl backdrop-blur-xl px-8 py-10 rounded-l-2xl shadow-2xl section-padding relative overflow-hidden"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(183, 218, 214, 0.9), rgba(183, 218, 214, 0.9)), url(${beachImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
+              <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
+                font-['Inter'] tracking-[0.2em] leading-relaxed
+                [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
+                border-b-2 border-white/30 pb-2 uppercase w-full">Description</h2>
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
@@ -183,11 +194,21 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Location Section - Offset to the left */}
         <AnimateOnScroll animation={fadeInRight}>
-          <section id="location" className="mr-auto ml-0 max-w-3xl bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-12 rounded-r-2xl shadow-2xl section-padding">
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-8">
-              <img src={festLogo} alt="Festival Logo" className="w-28 h-28 object-contain" />
-              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
-                tracking-wide uppercase">Location</h2>
+          <section 
+            id="location" 
+            className="mr-auto ml-0 max-w-3xl backdrop-blur-xl px-8 py-10 rounded-r-2xl shadow-2xl section-padding relative overflow-hidden"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(115, 208, 235, 0.9), rgba(115, 208, 235, 0.9)), url(${aerialBeachImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
+              <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
+                font-['Inter'] tracking-[0.2em] leading-relaxed
+                [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
+                border-b-2 border-white/30 pb-2 uppercase w-full">Location</h2>
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
@@ -204,38 +225,49 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Prizes Section - Centered with special styling */}
         <AnimateOnScroll animation={scaleIn}>
-          <section id="prizes" className="mx-auto max-w-4xl bg-[rgb(183,218,214)]/80 backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding">
-            <div className="flex flex-col items-center gap-4 mb-8">
-              <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-2xl md:text-3xl font-[700] text-black text-center
-                font-['Playfair_Display'] tracking-wide">Prizes</h2>
+          <section 
+            id="prizes" 
+            className="mx-auto max-w-4xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(183, 218, 214, 0.9), rgba(183, 218, 214, 0.9)), url(${beachImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
+              <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
+                font-['Inter'] tracking-[0.2em] leading-relaxed
+                [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
+                border-b-2 border-white/30 pb-2 uppercase w-full">Prizes</h2>
             </div>
             
             {/* Prize amounts in a row */}
-            <div className="flex flex-col md:flex-row justify-between mb-8 gap-6">
-              <div className="flex items-center bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-                <span className="text-3xl font-[800] text-yellow-500 mr-4 
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+              <div className="flex items-center bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                <span className="text-2xl md:text-3xl font-[800] text-yellow-500 mr-2 
                   [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]">1st Place</span>
-                <span className="text-2xl font-[600]">$7,000</span>
+                <span className="text-xl md:text-2xl font-[600]">$7,000</span>
               </div>
               
-              <div className="flex items-center bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-                <span className="text-3xl font-[800] text-gray-400 mr-4 
+              <div className="flex items-center bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                <span className="text-2xl md:text-3xl font-[800] text-gray-400 mr-2 
                   [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]">2nd Place</span>
-                <span className="text-2xl font-[600]">$2,000</span>
+                <span className="text-xl md:text-2xl font-[600]">$2,000</span>
               </div>
               
-              <div className="flex items-center bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-                <span className="text-3xl font-[800] text-orange-500 mr-4 
+              <div className="flex items-center bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                <span className="text-2xl md:text-3xl font-[800] text-orange-500 mr-2 
                   [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]">3rd Place</span>
-                <span className="text-2xl font-[600]">$1,000</span>
+                <span className="text-xl md:text-2xl font-[600]">$1,000</span>
               </div>
             </div>
 
             {/* Audience Award */}
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-              <h3 className="text-2xl font-[700] text-black mb-4 
-                [text-shadow:_2px_2px_2px_rgb(0_0_0_/_25%)] tracking-wide">
+              <h3 className="text-2xl font-[600] text-white mb-4 
+                font-['Inter'] tracking-wider
+                [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">
                 Audience Award
               </h3>
               <p className="text-base md:text-xl mb-4 font-[500] [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)] mix-blend-luminosity">
@@ -250,11 +282,21 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Required Piece Section - Diagonal layout */}
         <AnimateOnScroll animation={fadeInLeft}>
-          <section id="required-piece" className="relative ml-auto mr-0 max-w-3xl bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-12 rounded-2xl shadow-2xl section-padding transform -rotate-2">
+          <section 
+            id="required-piece" 
+            className="relative ml-auto mr-0 max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding transform -rotate-2 relative overflow-hidden"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(115, 208, 235, 0.9), rgba(115, 208, 235, 0.9)), url(${aerialBeachImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
             <div className="flex items-center gap-4 mb-8">
               <img src={festLogo} alt="Festival Logo" className="w-28 h-28 object-contain" />
-              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
-                tracking-wide uppercase">Set Piece</h2>
+              <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
+                font-['Inter'] tracking-[0.2em] leading-relaxed
+                [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
+                border-b-2 border-white/30 pb-2 uppercase w-full">Set Piece</h2>
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
@@ -263,109 +305,88 @@ const WorldGuitarCompetitionPage = () => {
               and several YouTube videos are available for download below.
             </p>
 
-            <form
-              name="score-download"
-              method="POST"
-              data-netlify="true"
-              onSubmit={async (e) => {
+            <form 
+              name="score-download" 
+              method="POST" 
+              data-netlify="true" 
+              data-netlify-honeypot="bot-field"
+              onSubmit={(e) => {
                 e.preventDefault();
-                try {
-                  const form = e.target;
-                  const formData = new FormData(form);
-                  
-                  const response = await fetch("/", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: new URLSearchParams(formData).toString(),
-                  });
-
-                  if (response.ok) {
-                    alert("Thank you! Your form has been submitted successfully.");
+                const form = e.target;
+                fetch("/", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                  body: new URLSearchParams(new FormData(form)).toString()
+                })
+                  .then(() => {
+                    alert("Form submitted successfully! Check your email for the download link.");
                     form.reset();
-                  } else {
-                    throw new Error('Form submission failed');
-                  }
-                } catch (error) {
-                  console.error('Error:', error);
-                  alert("Sorry, there was an error submitting the form. Please try again.");
-                }
+                  })
+                  .catch(error => alert(error));
               }}
+              className="max-w-lg mx-auto mb-8 space-y-6 bg-black/20 p-6 rounded-lg"
             >
-              <div className="max-w-lg mx-auto mb-8 space-y-6 bg-black/20 p-6 rounded-lg">
-                <input type="hidden" name="form-name" value="score-download" />
+              <input type="hidden" name="form-name" value="score-download" />
+              <input type="hidden" name="bot-field" />
+              
+              <p>
+                <label className="text-xl font-[700] [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
+                  Full Name:
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    className="w-full px-4 py-3 mt-2 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
+                  />
+                </label>
+              </p>
+
+              <p>
+                <label className="text-xl font-[700] [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
+                  Age:
+                  <input
+                    type="number"
+                    name="age"
+                    required
+                    min="1"
+                    max="120"
+                    className="w-full px-4 py-3 mt-2 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
+                  />
+                </label>
+              </p>
+
+              <p>
+                <label className="text-xl font-[700] [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
+                  Country of Residence:
+                  <input
+                    type="text"
+                    name="country"
+                    required
+                    className="w-full px-4 py-3 mt-2 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
+                  />
+                </label>
+              </p>
+
+              <p>
+                <label className="text-xl font-[700] [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
+                  Email:
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 mt-2 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
+                  />
+                </label>
+              </p>
+
+              <div className="flex justify-center gap-4 mt-6">
+                <button 
+                  type="submit"
+                  className="inline-block bg-[#498FC6] text-white py-3 px-6 rounded-full hover:bg-[#3A7CAE] transition-colors text-center font-[700] text-lg shadow-md hover:shadow-lg"
+                >
+                  Download Score (PDF)
+                </button>
                 
-                <p className="flex flex-col space-y-2">
-                  <label className="text-xl font-[700] 
-                    [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
-                    Full Name:
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
-                    />
-                  </label>
-                </p>
-
-                <p className="flex flex-col space-y-2">
-                  <label className="text-xl font-[700] 
-                    [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
-                    Age:
-                    <input
-                      type="number"
-                      id="age"
-                      name="age"
-                      required
-                      min="1"
-                      max="120"
-                      className="w-full px-4 py-3 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
-                    />
-                  </label>
-                </p>
-
-                <p className="flex flex-col space-y-2">
-                  <label className="text-xl font-[700] 
-                    [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
-                    Country of Residence:
-                    <input
-                      type="text"
-                      id="country"
-                      name="country"
-                      required
-                      className="w-full px-4 py-3 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
-                    />
-                  </label>
-                </p>
-
-                <p className="flex flex-col space-y-2">
-                  <label className="text-xl font-[700] 
-                    [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
-                    Email:
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
-                    />
-                  </label>
-                </p>
-
-                <div className="flex justify-center gap-4 mt-6">
-                  <button 
-                    type="submit"
-                    className="inline-block bg-[#498FC6] text-white py-3 px-6 rounded-full hover:bg-[#3A7CAE] transition-colors text-center font-[700] text-lg shadow-md hover:shadow-lg"
-                  >
-                    Download Score (PDF)
-                  </button>
-                  <button 
-                    type="submit"
-                    className="inline-block bg-green-600 text-white py-3 px-6 rounded-full hover:bg-green-700 transition-colors text-center font-[700] text-lg shadow-md hover:shadow-lg"
-                  >
-                    Download Audio (MP3)
-                  </button>
-                </div>
               </div>
             </form>
           </section>
@@ -373,11 +394,21 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Age Section - With updated styling */}
         <AnimateOnScroll animation={fadeInRight}>
-          <section id="age" className="ml-auto mr-0 max-w-3xl bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-10 rounded-l-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300">
+          <section 
+            id="age" 
+            className="ml-auto mr-0 max-w-3xl backdrop-blur-xl px-8 py-10 rounded-l-2xl shadow-2xl section-padding relative overflow-hidden"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(115, 208, 235, 0.9), rgba(115, 208, 235, 0.9)), url(${beachImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
             <div className="flex items-center gap-4 mb-6">
               <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
-                tracking-wide uppercase">Age</h2>
+              <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
+                font-['Inter'] tracking-[0.2em] leading-relaxed
+                [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
+                border-b-2 border-white/30 pb-2 uppercase w-full">Age</h2>
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
@@ -389,11 +420,21 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Preliminary Round Section */}
         <AnimateOnScroll animation={fadeInLeft}>
-          <section id="preliminary-round" className="mr-auto ml-0 max-w-3xl bg-[rgb(183,218,214)]/80 backdrop-blur-xl p-10 rounded-r-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300">
+          <section 
+            id="preliminary-round" 
+            className="mr-auto ml-0 max-w-3xl backdrop-blur-xl px-8 py-10 rounded-r-2xl shadow-2xl section-padding relative overflow-hidden"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(183, 218, 214, 0.9), rgba(183, 218, 214, 0.9)), url(${aerialBeachImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
             <div className="flex items-center gap-4 mb-6">
               <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
-                tracking-wide uppercase">Preliminary Round</h2>
+              <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
+                font-['Inter'] tracking-[0.2em] leading-relaxed
+                [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
+                border-b-2 border-white/30 pb-2 uppercase w-full">Preliminary Round</h2>
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
@@ -419,11 +460,21 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Final Stage Section */}
         <AnimateOnScroll animation={fadeInRight}>
-          <section id="final-stage" className="ml-auto mr-0 max-w-3xl bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-10 rounded-l-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300">
+          <section 
+            id="final-stage" 
+            className="ml-auto mr-0 max-w-3xl backdrop-blur-xl p-10 rounded-l-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300 relative overflow-hidden"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(115, 208, 235, 0.9), rgba(115, 208, 235, 0.9)), url(${aerialBeachImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
             <div className="flex items-center gap-4 mb-6">
               <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
-                tracking-wide uppercase">Final Stage</h2>
+              <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
+                font-['Inter'] tracking-[0.2em] leading-relaxed
+                [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
+                border-b-2 border-white/30 pb-2 uppercase w-full">Final Stage</h2>
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
@@ -442,13 +493,24 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Stipend Section */}
         <AnimateOnScroll animation={fadeInLeft}>
-          <section id="stipend" className="mr-auto ml-0 max-w-3xl bg-[rgb(183,218,214)]/80 backdrop-blur-xl p-10 rounded-r-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300">
+          <section 
+            id="stipend" 
+            className="mr-auto ml-0 max-w-3xl backdrop-blur-xl p-10 rounded-r-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300 relative overflow-hidden"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(183, 218, 214, 0.9), rgba(183, 218, 214, 0.9)), url(${beachImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
             <div className="flex items-center gap-4 mb-6">
               <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
-                tracking-wide uppercase">Stipend for Finalists</h2>
+              <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
+                font-['Inter'] tracking-[0.2em] leading-relaxed
+                [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
+                border-b-2 border-white/30 pb-2 uppercase w-full">Stipend for Finalists</h2>
             </div>
-            <h3 className="text-2xl font-[700] text-black mb-4 
+            <h3 className="text-2xl font-[600] text-white mb-4 
+              font-['Inter'] tracking-wider
               [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Flights</h3>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
@@ -463,7 +525,8 @@ const WorldGuitarCompetitionPage = () => {
               minutes from the city. San Juan receives daily flights from various parts of the U.S. and also direct
               flights from Europe. Aguadilla offers direct flights from New York and Orlando, Florida.
             </p>
-            <h3 className="text-2xl font-[700] text-black mb-4 
+            <h3 className="text-2xl font-[600] text-white mb-4 
+              font-['Inter'] tracking-wider
               [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Hotel and Transportation</h3>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
@@ -477,43 +540,23 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Jury Section - Grid layout with hover effects */}
         <AnimateOnScroll animation={fadeInRight}>
-          <section id="jury" className="mx-auto max-w-5xl bg-[rgb(140,149,77)]/80 backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding">
+          <section 
+            id="jury" 
+            className="mx-auto max-w-5xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(140, 149, 77, 0.9), rgba(140, 149, 77, 0.9)), url(${beachImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
             <div className="flex items-center gap-4 mb-8">
               <img src={festLogo} alt="Festival Logo" className="w-28 h-28 object-contain" />
-              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
-                tracking-wide uppercase">International Jury</h2>
+              <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
+                font-['Inter'] tracking-[0.2em] leading-relaxed
+                [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
+                border-b-2 border-white/30 pb-2 uppercase w-full">International Jury</h2>
             </div>
             
-            {/* Add decorative elements */}
-            <div className="absolute -left-20 top-1/2 transform -translate-y-1/2 opacity-30">
-              <motion.div 
-                className="w-32 h-32 rounded-full bg-[rgb(115,208,235)]/20 backdrop-blur-sm"
-                animate={{
-                  scale: [1, 1.2, 1],
-                  rotate: [0, 180, 360],
-                }}
-                transition={{
-                  duration: 20,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              />
-            </div>
-            <div className="absolute -right-20 top-1/3 transform -translate-y-1/2 opacity-30">
-              <motion.div 
-                className="w-24 h-24 rounded-full bg-[rgb(183,218,214)]/20 backdrop-blur-sm"
-                animate={{
-                  scale: [1.2, 1, 1.2],
-                  rotate: [360, 180, 0],
-                }}
-                transition={{
-                  duration: 15,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              />
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div 
                 className="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-xl"
@@ -556,13 +599,13 @@ const WorldGuitarCompetitionPage = () => {
                   >
                     <img 
                       src={juryImage2} 
-                      alt="Alberto and Pablo Martos" 
+                      alt="Alfredo Minetti and Richard Scofano" 
                       className="w-full h-full object-cover object-center"
                     />
                   </motion.div>
                   <h3 className="text-xl font-[700] text-center 
                     [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Alfredo Minetti and Richard Scofano</h3>
-                  <p className="text-center text-gray-300">Cellist and Violinist (Spain)</p>
+                  <p className="text-center text-gray-300">Pianist (Uruguay) and Composer/Bandoneonist (Argentina)</p>
                 </div>
               </motion.div>
               <motion.div 
@@ -581,13 +624,13 @@ const WorldGuitarCompetitionPage = () => {
                   >
                     <img 
                       src={juryImage3} 
-                      alt="Alfredo Minetti and Richard Scofano" 
+                      alt="Alberto and Pablo Martos" 
                       className="w-full h-full object-cover object-center"
                     />
                   </motion.div>
                   <h3 className="text-xl font-[700] text-center 
                     [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Alberto and Pablo Martos</h3>
-                  <p className="text-center text-gray-300">Pianist (Uruguay) and Composer/Bandoneonist (Argentina)</p>
+                  <p className="text-center text-gray-300">Cellist and Violinist (Spain)</p>
                 </div>
               </motion.div>
             </div>
@@ -602,13 +645,23 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* José Antonio López Section - Special layout */}
         <AnimateOnScroll animation={scaleIn}>
-          <section id="jose-antonio-lopez" className="mx-auto max-w-5xl bg-[rgb(52,121,150)]/80 backdrop-blur-xl p-12 rounded-2xl shadow-2xl section-padding">
+          <section 
+            id="jose-antonio-lopez" 
+            className="mx-auto max-w-5xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(52, 121, 150, 0.9), rgba(52, 121, 150, 0.9)), url(${aerialBeachImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
             <div className="grid md:grid-cols-[2fr,1fr] gap-8 items-start">
               <div className="order-2 md:order-1">
                 <div className="flex items-center gap-4 mb-6">
                   <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-                  <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
-                    tracking-wide uppercase">José Antonio López</h2>
+                  <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
+                    font-['Inter'] tracking-[0.2em] leading-relaxed
+                    [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
+                    border-b-2 border-white/30 pb-2 uppercase w-full">José Antonio López</h2>
                 </div>
                 <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
                   [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
@@ -658,103 +711,6 @@ const WorldGuitarCompetitionPage = () => {
             </div>
           </section>
         </AnimateOnScroll>
-
-        {/* Add decorative elements to other sections */}
-        <div className="absolute left-0 top-0 w-full h-full pointer-events-none">
-          {/* Guitar Pick */}
-          <motion.div 
-            className="absolute left-10 top-1/4 w-16 h-20 bg-[rgb(115,208,235)]/10 backdrop-blur-sm"
-            style={{
-              clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
-            }}
-            animate={{
-              y: [0, 50, 0],
-              rotate: [0, 360],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-
-          {/* Wave */}
-          <motion.div 
-            className="absolute right-10 top-1/3 w-32 h-12 bg-[rgb(183,218,214)]/10 backdrop-blur-sm rounded-full"
-            style={{
-              borderRadius: "50% 50% 0 0 / 100% 100% 0 0"
-            }}
-            animate={{
-              y: [0, 20, 0],
-              scaleX: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-
-          {/* Guitar Sound Hole */}
-          <motion.div 
-            className="absolute left-20 top-2/3"
-            animate={{
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            <div className="w-24 h-24 rounded-full bg-[rgb(52,121,150)]/10 backdrop-blur-sm border-2 border-[rgb(52,121,150)]/20" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[rgb(52,121,150)]/05 backdrop-blur-sm" />
-          </motion.div>
-
-          {/* Musical Note */}
-          <motion.div 
-            className="absolute right-20 bottom-1/4 w-8 h-16 bg-[rgb(115,208,235)]/10 backdrop-blur-sm"
-            style={{
-              clipPath: "path('M8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C12.42 16 16 12.42 16 8C16 3.58 12.42 0 8 0ZM8 14C4.69 14 2 11.31 2 8C2 4.69 4.69 2 8 2C11.31 2 14 4.69 14 8C14 11.31 11.31 14 8 14Z')"
-            }}
-            animate={{
-              y: [-20, 20, -20],
-              rotate: [0, 10, 0],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-
-          {/* Bubble Group */}
-          <div className="absolute left-1/4 bottom-1/4">
-            {[...Array(3)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute rounded-full bg-[rgb(183,218,214)]/10 backdrop-blur-sm"
-                style={{
-                  width: `${20 - i * 4}px`,
-                  height: `${20 - i * 4}px`,
-                }}
-                animate={{
-                  y: [-50 - i * 20, -100 - i * 20],
-                  x: [0, i % 2 === 0 ? 20 : -20, 0],
-                  opacity: [0.6, 0],
-                }}
-                transition={{
-                  duration: 4 + i,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: i * 0.5,
-                }}
-              />
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );
