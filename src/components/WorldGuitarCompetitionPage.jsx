@@ -119,7 +119,7 @@ const WorldGuitarCompetitionPage = () => {
     <div className="min-h-screen font-manrope-regular relative text-white text-base">
       <ParticleAnimation />
       <StarfieldBackground />
-      <div className="max-w-7xl mx-auto py-24 px-6 space-y-24 relative z-10">
+      <div className="max-w-6xl mx-auto py-24 px-6 space-y-24 relative z-10">
         {/* Hero Section - Full width and centered */}
         <AnimateOnScroll animation={fadeInUp}>
           <section className="text-center bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-8 rounded-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300 max-w-2xl mx-auto" id="hero">
@@ -138,11 +138,11 @@ const WorldGuitarCompetitionPage = () => {
           </section>
         </AnimateOnScroll>
 
-        {/* Description Section - Offset to the right */}
+        {/* Description Section - Slightly to the right */}
         <AnimateOnScroll animation={fadeInLeft}>
           <section 
             id="description" 
-            className="ml-auto mr-0 max-w-3xl backdrop-blur-xl px-8 py-10 rounded-l-2xl shadow-2xl section-padding relative overflow-hidden"
+            className="ml-auto mr-[10%] max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform rotate-1"
             style={{
               backgroundImage: `linear-gradient(to bottom, rgba(183, 218, 214, 0.9), rgba(183, 218, 214, 0.9)), url(${beachImage})`,
               backgroundSize: 'cover',
@@ -192,11 +192,11 @@ const WorldGuitarCompetitionPage = () => {
           </section>
         </AnimateOnScroll>
 
-        {/* Location Section - Offset to the left */}
+        {/* Location Section - Slightly to the left */}
         <AnimateOnScroll animation={fadeInRight}>
           <section 
             id="location" 
-            className="mr-auto ml-0 max-w-3xl backdrop-blur-xl px-8 py-10 rounded-r-2xl shadow-2xl section-padding relative overflow-hidden"
+            className="mr-auto ml-[10%] max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform -rotate-1"
             style={{
               backgroundImage: `linear-gradient(to bottom, rgba(115, 208, 235, 0.9), rgba(115, 208, 235, 0.9)), url(${aerialBeachImage})`,
               backgroundSize: 'cover',
@@ -223,11 +223,11 @@ const WorldGuitarCompetitionPage = () => {
           </section>
         </AnimateOnScroll>
 
-        {/* Prizes Section - Centered with special styling */}
+        {/* Prizes Section - Centered with rotation */}
         <AnimateOnScroll animation={scaleIn}>
           <section 
             id="prizes" 
-            className="mx-auto max-w-4xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden"
+            className="mx-auto max-w-4xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform rotate-1"
             style={{
               backgroundImage: `linear-gradient(to bottom, rgba(183, 218, 214, 0.9), rgba(183, 218, 214, 0.9)), url(${beachImage})`,
               backgroundSize: 'cover',
@@ -245,21 +245,30 @@ const WorldGuitarCompetitionPage = () => {
             {/* Prize amounts in a row */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               <div className="flex items-center bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-                <span className="text-2xl md:text-3xl font-[800] text-yellow-500 mr-2 
-                  [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]">1st Place</span>
-                <span className="text-xl md:text-2xl font-[600]">$7,000</span>
+                <div className="flex flex-col">
+                  <span className="text-2xl md:text-3xl font-[600] text-white mr-2 
+                    font-['Inter'] tracking-wider
+                    [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]">1st Place</span>
+                  <span className="text-xl md:text-2xl font-[500] text-white">$7,000</span>
+                </div>
               </div>
               
               <div className="flex items-center bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-                <span className="text-2xl md:text-3xl font-[800] text-gray-400 mr-2 
-                  [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]">2nd Place</span>
-                <span className="text-xl md:text-2xl font-[600]">$2,000</span>
+                <div className="flex flex-col">
+                  <span className="text-2xl md:text-3xl font-[600] text-white mr-2 
+                    font-['Inter'] tracking-wider
+                    [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]">2nd Place</span>
+                  <span className="text-xl md:text-2xl font-[500] text-[#73D0EB]">$2,000</span>
+                </div>
               </div>
               
               <div className="flex items-center bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-                <span className="text-2xl md:text-3xl font-[800] text-orange-500 mr-2 
-                  [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]">3rd Place</span>
-                <span className="text-xl md:text-2xl font-[600]">$1,000</span>
+                <div className="flex flex-col">
+                  <span className="text-2xl md:text-3xl font-[600] text-white mr-2 
+                    font-['Inter'] tracking-wider
+                    [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]">3rd Place</span>
+                  <span className="text-xl md:text-2xl font-[500] text-[#498FC6]">$1,000</span>
+                </div>
               </div>
             </div>
 
@@ -280,19 +289,19 @@ const WorldGuitarCompetitionPage = () => {
           </section>
         </AnimateOnScroll>
 
-        {/* Required Piece Section - Diagonal layout */}
+        {/* Required Piece Section - Slightly to the right */}
         <AnimateOnScroll animation={fadeInLeft}>
           <section 
             id="required-piece" 
-            className="relative ml-auto mr-0 max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding transform -rotate-2 relative overflow-hidden"
+            className="ml-auto mr-[10%] max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform -rotate-2"
             style={{
               backgroundImage: `linear-gradient(to bottom, rgba(115, 208, 235, 0.9), rgba(115, 208, 235, 0.9)), url(${aerialBeachImage})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex items-center gap-4 mb-8">
-              <img src={festLogo} alt="Festival Logo" className="w-28 h-28 object-contain" />
+            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -392,19 +401,19 @@ const WorldGuitarCompetitionPage = () => {
           </section>
         </AnimateOnScroll>
 
-        {/* Age Section - With updated styling */}
+        {/* Age Section - Slightly to the left */}
         <AnimateOnScroll animation={fadeInRight}>
           <section 
             id="age" 
-            className="ml-auto mr-0 max-w-3xl backdrop-blur-xl px-8 py-10 rounded-l-2xl shadow-2xl section-padding relative overflow-hidden"
+            className="mr-auto ml-[10%] max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform rotate-1"
             style={{
               backgroundImage: `linear-gradient(to bottom, rgba(115, 208, 235, 0.9), rgba(115, 208, 235, 0.9)), url(${beachImage})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
+            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -422,15 +431,15 @@ const WorldGuitarCompetitionPage = () => {
         <AnimateOnScroll animation={fadeInLeft}>
           <section 
             id="preliminary-round" 
-            className="mr-auto ml-0 max-w-3xl backdrop-blur-xl px-8 py-10 rounded-r-2xl shadow-2xl section-padding relative overflow-hidden"
+            className="ml-auto mr-[10%] max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform rotate-1"
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(183, 218, 214, 0.9), rgba(183, 218, 214, 0.9)), url(${aerialBeachImage})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(140, 149, 77, 0.9), rgba(140, 149, 77, 0.9)), url(${aerialBeachImage})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
+            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -462,15 +471,15 @@ const WorldGuitarCompetitionPage = () => {
         <AnimateOnScroll animation={fadeInRight}>
           <section 
             id="final-stage" 
-            className="ml-auto mr-0 max-w-3xl backdrop-blur-xl p-10 rounded-l-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300 relative overflow-hidden"
+            className="mr-auto ml-[10%] max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform -rotate-1"
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(115, 208, 235, 0.9), rgba(115, 208, 235, 0.9)), url(${aerialBeachImage})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(73, 143, 198, 0.9), rgba(73, 143, 198, 0.9)), url(${beachImage})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
+            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -495,15 +504,15 @@ const WorldGuitarCompetitionPage = () => {
         <AnimateOnScroll animation={fadeInLeft}>
           <section 
             id="stipend" 
-            className="mr-auto ml-0 max-w-3xl backdrop-blur-xl p-10 rounded-r-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300 relative overflow-hidden"
+            className="ml-auto mr-[10%] max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform rotate-1"
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(183, 218, 214, 0.9), rgba(183, 218, 214, 0.9)), url(${beachImage})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(115, 208, 235, 0.9), rgba(115, 208, 235, 0.9)), url(${aerialBeachImage})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
+            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -542,15 +551,15 @@ const WorldGuitarCompetitionPage = () => {
         <AnimateOnScroll animation={fadeInRight}>
           <section 
             id="jury" 
-            className="mx-auto max-w-5xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden"
+            className="mr-auto ml-[10%] max-w-5xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform -rotate-1"
             style={{
               backgroundImage: `linear-gradient(to bottom, rgba(140, 149, 77, 0.9), rgba(140, 149, 77, 0.9)), url(${beachImage})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex items-center gap-4 mb-8">
-              <img src={festLogo} alt="Festival Logo" className="w-28 h-28 object-contain" />
+            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -647,17 +656,17 @@ const WorldGuitarCompetitionPage = () => {
         <AnimateOnScroll animation={scaleIn}>
           <section 
             id="jose-antonio-lopez" 
-            className="mx-auto max-w-5xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden"
+            className="mx-auto max-w-5xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform rotate-1"
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(52, 121, 150, 0.9), rgba(52, 121, 150, 0.9)), url(${aerialBeachImage})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(73, 143, 198, 0.9), rgba(73, 143, 198, 0.9)), url(${aerialBeachImage})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
             <div className="grid md:grid-cols-[2fr,1fr] gap-8 items-start">
               <div className="order-2 md:order-1">
-                <div className="flex items-center gap-4 mb-6">
-                  <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
+                <div className="flex flex-col items-center gap-4 mb-8 w-full">
+                  <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
                   <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                     font-['Inter'] tracking-[0.2em] leading-relaxed
                     [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]

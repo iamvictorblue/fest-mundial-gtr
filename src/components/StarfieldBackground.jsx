@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial } from '@react-three/drei'
 import * as THREE from 'three'
+import beachImage from "../assets/beach-image.png";
 
 function StarField(props) {
   const ref = useRef()
@@ -64,8 +65,24 @@ export default function StarfieldBackground() {
       top: 0, 
       left: 0, 
       zIndex: -1, 
-      background: 'linear-gradient(to bottom, rgb(115,208,235), rgb(183,218,214))'
+      background: `linear-gradient(to bottom, rgb(115,208,235), rgb(183,218,214)), url(${beachImage})`,
+      backgroundBlendMode: 'overlay',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      opacity: 0.3,
     }}>
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundImage: `url(${beachImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        opacity: 0.1,
+        mixBlendMode: 'overlay',
+      }} />
       <Canvas camera={{ position: [0, 0, 1] }}>
         <StarField />
       </Canvas>
