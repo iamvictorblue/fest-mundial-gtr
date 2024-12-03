@@ -47,108 +47,90 @@ const Navbar = () => {
 
   return (
     <motion.nav 
-      className="fixed top-0 left-0 right-0 w-full z-50 bg-[rgb(52,121,150)]"
+      className="fixed top-0 left-0 right-0 w-full z-50 bg-[rgb(73,143,198)]"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
     >
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <Link to="/">
-                <motion.img
-                  className="h-12 w-auto"
-                  src={competitionLogo}
-                  alt="World Guitar Competition"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                />
-              </Link>
-            </div>
+      <div className="max-w-[95vw] mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          <div className="flex-shrink-0">
+            <Link to="/">
+              <motion.img
+                className="h-12 w-auto"
+                src={competitionLogo}
+                alt="World Guitar Competition"
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              />
+            </Link>
           </div>
-          <div className="hidden md:block">
-            <div className="ml-4 flex items-center space-x-2">
-              {navItems.map((item, index) => (
-                <motion.a
-                  key={index}
-                  href={item.href}
-                  onClick={(e) => scrollToSection(e, item.href.slice(1))}
-                  className="text-white hover:bg-opacity-75 px-2 py-1 rounded-md text-sm font-medium transition duration-300 ease-in-out"
-                  whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,0.1)" }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {item.label}
-                </motion.a>
-              ))}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  to="/"
-                  className="bg-white text-[#498FC6] py-1 px-3 rounded-md hover:bg-gray-100 transition-all duration-300 text-sm font-bold shadow-md"
-                >
-                  Back to Festival
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-white hover:bg-[#3A7CAE] p-2 rounded-md focus:outline-none"
-            >
-              <span className="sr-only">Open main menu</span>
-              {isOpen ? (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-      {isOpen && (
-        <motion.div 
-          className="md:hidden"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="hidden md:flex items-center flex-wrap justify-center gap-2">
             {navItems.map((item, index) => (
               <motion.a
                 key={index}
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href.slice(1))}
-                className="text-white hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium"
-                whileHover={{ scale: 1.05, x: 10 }}
+                className="text-white hover:bg-white hover:text-[rgb(73,143,198)] px-3 py-2 rounded-md text-sm font-[600] transition-all duration-300 ease-in-out whitespace-nowrap"
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {item.label}
               </motion.a>
             ))}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <Link
+              to="/"
+              className="bg-white text-[rgb(73,143,198)] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 text-sm font-[700] shadow-md"
             >
-              <Link
-                to="/"
-                className="bg-white text-[#498FC6] block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                Back to Festival
-              </Link>
-            </motion.div>
+              Back to Festival
+            </Link>
           </div>
-        </motion.div>
-      )}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-[rgb(83,153,208)] focus:outline-none"
+            aria-expanded="false"
+          >
+            <span className="sr-only">Open main menu</span>
+            {isOpen ? (
+              <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
+        {isOpen && (
+          <motion.div 
+            className="md:hidden absolute left-0 right-0 bg-[rgb(73,143,198)] px-4 pt-2 pb-4 shadow-lg"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+          >
+            {navItems.map((item, index) => (
+              <motion.a
+                key={index}
+                href={item.href}
+                onClick={(e) => scrollToSection(e, item.href.slice(1))}
+                className="block px-3 py-2 rounded-md text-base font-[500] text-white hover:bg-white hover:text-[rgb(73,143,198)] transition-all duration-200"
+                whileHover={{ x: 10 }}
+              >
+                {item.label}
+              </motion.a>
+            ))}
+            <Link
+              to="/"
+              className="block mt-4 px-3 py-2 rounded-md text-base font-[700] bg-white text-[rgb(73,143,198)]"
+              onClick={() => setIsOpen(false)}
+            >
+              Back to Festival
+            </Link>
+          </motion.div>
+        )}
+      </div>
     </motion.nav>
   );
 };

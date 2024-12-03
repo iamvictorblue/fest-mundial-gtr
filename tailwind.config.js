@@ -4,16 +4,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
-        script: ['Dancing Script', 'cursive'],
-        display: ['Oswald', 'sans-serif'],
-        'inter': ['Inter', 'sans-serif'],
-        'space-grotesk': ['Space Grotesk', 'sans-serif'],
-        'work-sans': ['Work Sans', 'sans-serif'],
-        'chunky': ['Roboto', 'sans-serif'],
-        'satisfy': ['Satisfy', 'cursive'],
-        'space-mono': ['Space Mono', 'monospace'],
-        'oswald': ['Oswald', 'sans-serif'],
+        'manrope': ['Manrope', 'sans-serif'],
+        'manrope-thin': ['Manrope', 'sans-serif'], // weight 200
+        'manrope-light': ['Manrope', 'sans-serif'], // weight 300
+        'manrope-regular': ['Manrope', 'sans-serif'], // weight 400
+        'manrope-medium': ['Manrope', 'sans-serif'], // weight 500
+        'manrope-semibold': ['Manrope', 'sans-serif'], // weight 600
+        'manrope-bold': ['Manrope', 'sans-serif'], // weight 700
+        'manrope-extrabold': ['Manrope', 'sans-serif'], // weight 800
       },
       animation: {
         'fade-in': 'fadeIn 1s ease-out forwards',

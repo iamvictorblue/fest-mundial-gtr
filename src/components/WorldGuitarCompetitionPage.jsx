@@ -115,13 +115,13 @@ const styles = {
 
 const WorldGuitarCompetitionPage = () => {
   return (
-    <div className="min-h-screen font-inter relative text-white">
+    <div className="min-h-screen font-manrope-regular relative text-white text-base">
       <ParticleAnimation />
       <StarfieldBackground />
       <div className="max-w-7xl mx-auto py-24 px-6 space-y-24 relative z-10">
         {/* Hero Section - Full width and centered */}
         <AnimateOnScroll animation={fadeInUp}>
-          <section className="text-center bg-[rgb(115,208,235)]/40 backdrop-blur-xl p-12 rounded-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300" id="hero">
+          <section className="text-center bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-8 rounded-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300 max-w-4xl mx-auto" id="hero">
             <motion.div 
               className="max-w-2xl mx-auto"
               initial={{ opacity: 0, x: -50 }}
@@ -139,39 +139,39 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Description Section - Offset to the right */}
         <AnimateOnScroll animation={fadeInLeft}>
-          <section id="description" className="ml-auto mr-0 max-w-3xl bg-[rgb(183,218,214)]/40 backdrop-blur-xl p-10 rounded-l-2xl shadow-2xl section-padding">
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-6">
+          <section id="description" className="ml-auto mr-0 max-w-3xl bg-[rgb(183,218,214)]/80 backdrop-blur-xl px-8 py-10 rounded-l-2xl shadow-2xl section-padding">
+            <div className="flex flex-col items-center gap-4 mb-8">
               <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-4xl font-bold text-[rgb(52,121,150)] font-satisfy text-center md:text-left 
-                [text-shadow:_2px_2px_2px_rgb(0_0_0_/_20%)] tracking-wide">Description</h2>
+              <h2 className="text-2xl md:text-3xl font-[700] text-black text-center
+                font-['Playfair_Display'] tracking-wide">Description</h2>
             </div>
-            <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The aim of the <span className="font-space-grotesk font-semibold">José Antonio López World Guitar Competition</span> is to reward 
               <span className="font-inter italic"> artistic expression</span> and
               <span className="font-chunky"> musicality</span> in classical guitar performance.
             </p>
-            <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               With $18,000 in prizes, the competition invites guitarists from around the world to revive the
               interpretative styles evoked by legendary figures such as Julian Bream (England), Alirio Díaz
               (Venezuela), and Leonardo Egúrbida (Puerto Rico). This competition encourages guitarists
               worldwide to bring back the lyricism and tonal colors that make classical guitar unique.
             </p>
-            <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The competition will be held as part of the World Guitar Festival, an event dedicated to the guitar,
               featuring the most important luthiers in the world. Participants will include Andrea Tacchi (Italy),
               Gerhard Oldiges (Germany), Gerardo Escobedo (Mexico), Alberto Martínez from Orfeo Magazine
               (Uruguay/Paris), and the collector José Luis Postigo (Seville, Spain).
             </p>
-            <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The featured concerts will be performed by Yamandú Costa (Croatia) and Leonela Alejandro
               (Puerto Rico). In addition, two Café Concerts, titled "Guitar Tasting," will be offered, featuring
               virtuosos Iván Rijos (Puerto Rico) and Marcus Toscano (Brazil).
             </p>
-            <p className="text-lg font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words font-bold
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The event will conclude with the Gustavo and Beatriz Arvelo National Guitar Competition, where
               the audience will enjoy the most talented young Puerto Rican guitarists between the ages of 10
@@ -183,18 +183,18 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Location Section - Offset to the left */}
         <AnimateOnScroll animation={fadeInRight}>
-          <section id="location" className="mr-auto ml-0 max-w-3xl bg-[rgb(115,208,235)]/40 backdrop-blur-xl p-10 rounded-r-2xl shadow-2xl section-padding">
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-6">
-              <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-4xl font-bold text-[rgb(52,121,150)] font-satisfy text-center md:text-left 
-                [text-shadow:_2px_2px_2px_rgb(0_0_0_/_20%)] tracking-wide">Location</h2>
+          <section id="location" className="mr-auto ml-0 max-w-3xl bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-12 rounded-r-2xl shadow-2xl section-padding">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-8">
+              <img src={festLogo} alt="Festival Logo" className="w-28 h-28 object-contain" />
+              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
+                tracking-wide uppercase">Location</h2>
             </div>
-            <p className="text-lg font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The José Antonio López World Guitar Competition will be held at the Symphonic Hall, San Juan,
               Puerto Rico.
             </p>
-            <p className="text-lg mt-4 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">
               <strong className="font-space-grotesk [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Date:</strong> 
               <span className="font-inter">Sunday, May 4, 2025.</span>
@@ -204,53 +204,59 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Prizes Section - Centered with special styling */}
         <AnimateOnScroll animation={scaleIn}>
-          <section id="prizes" className="mx-auto max-w-4xl bg-[rgb(183,218,214)]/40 backdrop-blur-xl p-10 rounded-2xl shadow-2xl section-padding transform hover:rotate-1 transition-all duration-300">
-            <div className="flex items-center gap-4 mb-6">
+          <section id="prizes" className="mx-auto max-w-4xl bg-[rgb(183,218,214)]/80 backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding">
+            <div className="flex flex-col items-center gap-4 mb-8">
               <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-4xl font-bold text-[#498FC6] font-satisfy 
-                [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]">Prizes</h2>
+              <h2 className="text-2xl md:text-3xl font-[700] text-black text-center
+                font-['Playfair_Display'] tracking-wide">Prizes</h2>
             </div>
-            <ul className="space-y-4 text-lg font-work-sans">
-              <li className="flex items-center">
-                <span className="text-3xl font-bold text-yellow-500 mr-4 
-                  [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)] font-space-grotesk">1st Place</span>
-                <span>$7,000</span>
-              </li>
-              <li className="flex items-center">
-                <span className="text-3xl font-bold text-gray-400 mr-4 
-                  [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)] font-space-grotesk">2nd Place</span>
-                <span>$2,000</span>
-              </li>
-              <li className="flex items-center">
-                <span className="text-3xl font-bold text-orange-500 mr-4 
-                  [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)] font-space-grotesk">3rd Place</span>
-                <span>$1,000</span>
-              </li>
-              <li className="flex flex-col">
-                <br></br>
-                <span className="text-2xl font-bold text-[#498FC6] mb-4 [text-shadow:_2px_2px_2px_rgb(0_0_0_/_25%)] font-chunky tracking-wide">
-                  Audience Award
-                </span>
-                <span className="[text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)] mix-blend-luminosity">
-                  This will be awarded for the best performance of the required piece, "Guitarra
-                  Poética," by composer José Antonio López. The prize will consist of a "Replica of Antonio de
-                  Torres" concert guitar, valued at $5,000, built by the world-renowned luthier Gerardo Escobedo
-                  from Paracho, Mexico.
-                </span>
-              </li>
-            </ul>
+            
+            {/* Prize amounts in a row */}
+            <div className="flex flex-col md:flex-row justify-between mb-8 gap-6">
+              <div className="flex items-center bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                <span className="text-3xl font-[800] text-yellow-500 mr-4 
+                  [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]">1st Place</span>
+                <span className="text-2xl font-[600]">$7,000</span>
+              </div>
+              
+              <div className="flex items-center bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                <span className="text-3xl font-[800] text-gray-400 mr-4 
+                  [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]">2nd Place</span>
+                <span className="text-2xl font-[600]">$2,000</span>
+              </div>
+              
+              <div className="flex items-center bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                <span className="text-3xl font-[800] text-orange-500 mr-4 
+                  [text-shadow:_2px_2px_4px_rgb(0_0_0_/_40%)]">3rd Place</span>
+                <span className="text-2xl font-[600]">$1,000</span>
+              </div>
+            </div>
+
+            {/* Audience Award */}
+            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+              <h3 className="text-2xl font-[700] text-black mb-4 
+                [text-shadow:_2px_2px_2px_rgb(0_0_0_/_25%)] tracking-wide">
+                Audience Award
+              </h3>
+              <p className="text-base md:text-xl mb-4 font-[500] [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)] mix-blend-luminosity">
+                This will be awarded for the best performance of the required piece, "Guitarra
+                Poética," by composer José Antonio López. The prize will consist of a "Replica of Antonio de
+                Torres" concert guitar, valued at $5,000, built by the world-renowned luthier Gerardo Escobedo
+                from Paracho, Mexico.
+              </p>
+            </div>
           </section>
         </AnimateOnScroll>
 
         {/* Required Piece Section - Diagonal layout */}
         <AnimateOnScroll animation={fadeInLeft}>
-          <section id="required-piece" className="relative ml-auto mr-0 max-w-3xl bg-[rgb(115,208,235)]/40 backdrop-blur-xl p-10 rounded-2xl shadow-2xl section-padding transform -rotate-2">
-            <div className="flex items-center gap-4 mb-6">
-              <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-4xl font-bold text-[#498FC6] font-satisfy 
-                [text-shadow:_2px_2px_2px_rgb(0_0_0_/_25%)] tracking-wide">Set Piece</h2>
+          <section id="required-piece" className="relative ml-auto mr-0 max-w-3xl bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-12 rounded-2xl shadow-2xl section-padding transform -rotate-2">
+            <div className="flex items-center gap-4 mb-8">
+              <img src={festLogo} alt="Festival Logo" className="w-28 h-28 object-contain" />
+              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
+                tracking-wide uppercase">Set Piece</h2>
             </div>
-            <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The competition requires each contestant to perform the piece &quot;Guitarra Poética&quot; (Homage to
               Manuel Bellido) by Puerto Rican composer José Antonio López. The PDF score, audio sample,
@@ -261,23 +267,35 @@ const WorldGuitarCompetitionPage = () => {
               name="score-download"
               method="POST"
               data-netlify="true"
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
-                const form = e.target;
-                fetch("/", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                  body: new URLSearchParams(new FormData(form)).toString(),
-                })
-                  .then(() => alert("Form submitted successfully!"))
-                  .catch((error) => alert(error));
+                try {
+                  const form = e.target;
+                  const formData = new FormData(form);
+                  
+                  const response = await fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(formData).toString(),
+                  });
+
+                  if (response.ok) {
+                    alert("Thank you! Your form has been submitted successfully.");
+                    form.reset();
+                  } else {
+                    throw new Error('Form submission failed');
+                  }
+                } catch (error) {
+                  console.error('Error:', error);
+                  alert("Sorry, there was an error submitting the form. Please try again.");
+                }
               }}
             >
               <div className="max-w-lg mx-auto mb-8 space-y-6 bg-black/20 p-6 rounded-lg">
                 <input type="hidden" name="form-name" value="score-download" />
                 
                 <p className="flex flex-col space-y-2">
-                  <label htmlFor="name" className="text-lg font-semibold font-space-grotesk 
+                  <label className="text-xl font-[700] 
                     [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
                     Full Name:
                     <input
@@ -285,13 +303,13 @@ const WorldGuitarCompetitionPage = () => {
                       id="name"
                       name="name"
                       required
-                      className="w-full px-4 py-2 rounded bg-white/10 border border-white/20 text-white focus:outline-none focus:border-[#498FC6]"
+                      className="w-full px-4 py-3 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
                     />
                   </label>
                 </p>
 
                 <p className="flex flex-col space-y-2">
-                  <label htmlFor="age" className="text-lg font-semibold font-space-grotesk 
+                  <label className="text-xl font-[700] 
                     [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
                     Age:
                     <input
@@ -301,13 +319,13 @@ const WorldGuitarCompetitionPage = () => {
                       required
                       min="1"
                       max="120"
-                      className="w-full px-4 py-2 rounded bg-white/10 border border-white/20 text-white focus:outline-none focus:border-[#498FC6]"
+                      className="w-full px-4 py-3 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
                     />
                   </label>
                 </p>
 
                 <p className="flex flex-col space-y-2">
-                  <label htmlFor="country" className="text-lg font-semibold font-space-grotesk 
+                  <label className="text-xl font-[700] 
                     [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
                     Country of Residence:
                     <input
@@ -315,13 +333,13 @@ const WorldGuitarCompetitionPage = () => {
                       id="country"
                       name="country"
                       required
-                      className="w-full px-4 py-2 rounded bg-white/10 border border-white/20 text-white focus:outline-none focus:border-[#498FC6]"
+                      className="w-full px-4 py-3 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
                     />
                   </label>
                 </p>
 
                 <p className="flex flex-col space-y-2">
-                  <label htmlFor="email" className="text-lg font-semibold font-space-grotesk 
+                  <label className="text-xl font-[700] 
                     [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
                     Email:
                     <input
@@ -329,7 +347,7 @@ const WorldGuitarCompetitionPage = () => {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-2 rounded bg-white/10 border border-white/20 text-white focus:outline-none focus:border-[#498FC6]"
+                      className="w-full px-4 py-3 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
                     />
                   </label>
                 </p>
@@ -337,13 +355,13 @@ const WorldGuitarCompetitionPage = () => {
                 <div className="flex justify-center gap-4 mt-6">
                   <button 
                     type="submit"
-                    className="inline-block bg-[#498FC6] text-white py-3 px-6 rounded-full hover:bg-[#3A7CAE] transition-colors text-center font-semibold shadow-md hover:shadow-lg"
+                    className="inline-block bg-[#498FC6] text-white py-3 px-6 rounded-full hover:bg-[#3A7CAE] transition-colors text-center font-[700] text-lg shadow-md hover:shadow-lg"
                   >
                     Download Score (PDF)
                   </button>
                   <button 
                     type="submit"
-                    className="inline-block bg-green-600 text-white py-3 px-6 rounded-full hover:bg-green-700 transition-colors text-center font-semibold shadow-md hover:shadow-lg"
+                    className="inline-block bg-green-600 text-white py-3 px-6 rounded-full hover:bg-green-700 transition-colors text-center font-[700] text-lg shadow-md hover:shadow-lg"
                   >
                     Download Audio (MP3)
                   </button>
@@ -355,13 +373,13 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Age Section - With updated styling */}
         <AnimateOnScroll animation={fadeInRight}>
-          <section id="age" className="ml-auto mr-0 max-w-3xl bg-[rgb(115,208,235)]/40 backdrop-blur-xl p-10 rounded-l-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300">
+          <section id="age" className="ml-auto mr-0 max-w-3xl bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-10 rounded-l-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300">
             <div className="flex items-center gap-4 mb-6">
               <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-4xl font-bold text-[rgb(52,121,150)] font-satisfy 
-                [text-shadow:_2px_2px_2px_rgb(0_0_0_/_25%)] tracking-wide">Age</h2>
+              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
+                tracking-wide uppercase">Age</h2>
             </div>
-            <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The José Antonio López World Guitar Competition is an open category event with no age limit for
               participation.
@@ -371,24 +389,24 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Preliminary Round Section */}
         <AnimateOnScroll animation={fadeInLeft}>
-          <section id="preliminary-round" className="mr-auto ml-0 max-w-3xl bg-[rgb(183,218,214)]/40 backdrop-blur-xl p-10 rounded-r-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300">
+          <section id="preliminary-round" className="mr-auto ml-0 max-w-3xl bg-[rgb(183,218,214)]/80 backdrop-blur-xl p-10 rounded-r-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300">
             <div className="flex items-center gap-4 mb-6">
               <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-4xl font-bold text-[rgb(52,121,150)] font-satisfy 
-                [text-shadow:_2px_2px_2px_rgb(0_0_0_/_25%)] tracking-wide">Preliminary Round</h2>
+              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
+                tracking-wide uppercase">Preliminary Round</h2>
             </div>
-            <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The José Antonio López World Guitar Competition requires an initial elimination phase, which
               will consist of the performance of the required piece titled "Guitarra Poética." This performance
               must be submitted via a YouTube video no later than March 30, 2025.
             </p>
-            <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               In the video, each contestant must include a personal introduction before the performance, stating
               their full name, country of origin, the name of the competition, and the title of the piece.
             </p>
-            <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               Along with the video, participants must submit the registration form, which can be downloaded
               from our website, accompanied by the video link. Both, the video link and the registration form
@@ -401,18 +419,18 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Final Stage Section */}
         <AnimateOnScroll animation={fadeInRight}>
-          <section id="final-stage" className="ml-auto mr-0 max-w-3xl bg-[rgb(115,208,235)]/40 backdrop-blur-xl p-10 rounded-l-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300">
+          <section id="final-stage" className="ml-auto mr-0 max-w-3xl bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-10 rounded-l-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300">
             <div className="flex items-center gap-4 mb-6">
               <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-4xl font-bold text-[rgb(52,121,150)] font-satisfy 
-                [text-shadow:_2px_2px_2px_rgb(0_0_0_/_25%)] tracking-wide">Final Stage</h2>
+              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
+                tracking-wide uppercase">Final Stage</h2>
             </div>
-            <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The final stage of the José Antonio López World Guitar Competition will be held in person on May
               4, 2025, at Pablo Casals Symphony Hall of the Centro de Bellas Artes de Santurce in San Juan, Puerto Rico.
             </p>
-            <p className="text-lg font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               In the first round of the final stage, the three finalists, selected in alphabetical order, will perform
               the required piece, "Guitarra Poética" by José Antonio López. In the second round, the finalists
@@ -424,30 +442,30 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Stipend Section */}
         <AnimateOnScroll animation={fadeInLeft}>
-          <section id="stipend" className="mr-auto ml-0 max-w-3xl bg-[rgb(183,218,214)]/40 backdrop-blur-xl p-10 rounded-r-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300">
+          <section id="stipend" className="mr-auto ml-0 max-w-3xl bg-[rgb(183,218,214)]/80 backdrop-blur-xl p-10 rounded-r-2xl shadow-2xl section-padding transform hover:scale-[1.02] transition-all duration-300">
             <div className="flex items-center gap-4 mb-6">
               <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-4xl font-bold text-[#498FC6] font-satisfy 
-                [text-shadow:_2px_2px_2px_rgb(0_0_0_/_25%)] tracking-wide">Stipend for Finalists</h2>
+              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
+                tracking-wide uppercase">Stipend for Finalists</h2>
             </div>
-            <h3 className="text-2xl font-semibold mb-4 
+            <h3 className="text-2xl font-[700] text-black mb-4 
               [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Flights</h3>
-            <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The three selected finalists will receive a $500 stipend to help cover their flight expenses. It is
               important to note that, as Puerto Rico is a U.S. territory, each contestant must ensure they meet the
               necessary visa requirements to enter U.S. territory.
             </p>
-            <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               When purchasing airline tickets, we recommend flying into either San Juan Airport or Aguadilla
               Airport. San Juan Airport is two and a half hours from Mayagüez, while Aguadilla Airport is 45
               minutes from the city. San Juan receives daily flights from various parts of the U.S. and also direct
               flights from Europe. Aguadilla offers direct flights from New York and Orlando, Florida.
             </p>
-            <h3 className="text-2xl font-semibold mb-4 
+            <h3 className="text-2xl font-[700] text-black mb-4 
               [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Hotel and Transportation</h3>
-            <p className="text-lg font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The José Antonio López World Guitar Competition will provide three nights of accommodation
               for the three finalists, as well as internal transportation. Additionally, the day after the competition,
@@ -459,11 +477,11 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* Jury Section - Grid layout with hover effects */}
         <AnimateOnScroll animation={fadeInRight}>
-          <section id="jury" className="mx-auto max-w-6xl bg-[rgb(140,149,77)]/40 backdrop-blur-xl p-10 rounded-2xl shadow-2xl section-padding">
+          <section id="jury" className="mx-auto max-w-5xl bg-[rgb(140,149,77)]/80 backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding">
             <div className="flex items-center gap-4 mb-8">
-              <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-              <h2 className="text-4xl font-bold text-[rgb(52,121,150)] font-satisfy 
-                [text-shadow:_2px_2px_2px_rgb(0_0_0_/_25%)] tracking-wide">International Jury</h2>
+              <img src={festLogo} alt="Festival Logo" className="w-28 h-28 object-contain" />
+              <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
+                tracking-wide uppercase">International Jury</h2>
             </div>
             
             {/* Add decorative elements */}
@@ -517,7 +535,7 @@ const WorldGuitarCompetitionPage = () => {
                       className="w-full h-full object-cover object-center"
                     />
                   </motion.div>
-                  <h3 className="text-xl font-semibold text-center font-space-grotesk 
+                  <h3 className="text-xl font-[700] text-center 
                     [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Composer Sergio Assad</h3>
                   <p className="text-center text-gray-300">President of the Jury</p>
                 </div>
@@ -542,7 +560,7 @@ const WorldGuitarCompetitionPage = () => {
                       className="w-full h-full object-cover object-center"
                     />
                   </motion.div>
-                  <h3 className="text-xl font-semibold text-center font-space-grotesk 
+                  <h3 className="text-xl font-[700] text-center 
                     [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Alfredo Minetti and Richard Scofano</h3>
                   <p className="text-center text-gray-300">Cellist and Violinist (Spain)</p>
                 </div>
@@ -567,13 +585,13 @@ const WorldGuitarCompetitionPage = () => {
                       className="w-full h-full object-cover object-center"
                     />
                   </motion.div>
-                  <h3 className="text-xl font-semibold text-center font-space-grotesk 
+                  <h3 className="text-xl font-[700] text-center 
                     [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Alberto and Pablo Martos</h3>
                   <p className="text-center text-gray-300">Pianist (Uruguay) and Composer/Bandoneonist (Argentina)</p>
                 </div>
               </motion.div>
             </div>
-            <p className="text-lg mt-8 font-work-sans whitespace-normal break-words 
+            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The José Antonio López World Guitar Competition has selected renowned artists from the
               international music scene as members of the jury. These distinguished jury members lend prestige
@@ -584,22 +602,22 @@ const WorldGuitarCompetitionPage = () => {
 
         {/* José Antonio López Section - Special layout */}
         <AnimateOnScroll animation={scaleIn}>
-          <section id="jose-antonio-lopez" className="mx-auto max-w-5xl bg-[rgb(52,121,150)]/40 backdrop-blur-xl p-12 rounded-2xl shadow-2xl section-padding">
+          <section id="jose-antonio-lopez" className="mx-auto max-w-5xl bg-[rgb(52,121,150)]/80 backdrop-blur-xl p-12 rounded-2xl shadow-2xl section-padding">
             <div className="grid md:grid-cols-[2fr,1fr] gap-8 items-start">
               <div className="order-2 md:order-1">
                 <div className="flex items-center gap-4 mb-6">
                   <img src={festLogo} alt="Festival Logo" className="w-24 h-24 object-contain" />
-                  <h2 className="text-4xl font-bold text-[#498FC6] font-satisfy 
-                    [text-shadow:_2px_2px_2px_rgb(0_0_0_/_25%)] tracking-wide">José Antonio López</h2>
+                  <h2 className="text-2xl md:text-3xl font-[700] text-black font-['Roboto'] text-center md:text-left 
+                    tracking-wide uppercase">José Antonio López</h2>
                 </div>
-                <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+                <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
                   [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
                   Retired guitarist and composer <span className="font-space-grotesk font-semibold">José Antonio López</span> holds a 
                   <span className="font-inter italic">doctorate from the prestigious Indiana University School of Music</span>, a 
                   <span className="font-chunky">Master's degree</span> from Arizona State University, and a 
                   <span className="font-space-grotesk">Bachelor's degree</span> from the Conservatory of Music of Puerto Rico.
                 </p>
-                <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+                <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
                   [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
                   With a successful career spanning more than 30 years as a guitar soloist,
                   his performances with major symphony orchestras across the
@@ -607,7 +625,7 @@ const WorldGuitarCompetitionPage = () => {
                   Puerto Rico, he has trained an entire generation of virtuoso guitarists
                   who now dominate the contemporary Puerto Rican guitar scene.
                 </p>
-                <p className="text-lg mb-4 font-work-sans whitespace-normal break-words 
+                <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
                   [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
                   Moreover, as a professor and researcher at the University of Puerto Rico
                   at Mayagüez, he has contributed to an extensive discography and
@@ -616,7 +634,7 @@ const WorldGuitarCompetitionPage = () => {
                   the trio Los Tres Ases, which will be accompanied by a documentary
                   film.
                 </p>
-                <p className="text-lg font-work-sans whitespace-normal break-words 
+                <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
                   [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
                   He is currently enjoying his retirement from performing and teaching,
                   dedicating his time entirely to composition and traveling the world in
