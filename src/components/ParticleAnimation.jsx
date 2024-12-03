@@ -94,6 +94,15 @@ const ParticleAnimation = () => {
     }
   };
 
+  const particlesConfig = {
+    particles: {
+      color: {
+        value: "rgb(104,198,231)"
+      },
+      // ... rest of config
+    }
+  };
+
   return (
     <div 
       className="absolute inset-0 z-0"

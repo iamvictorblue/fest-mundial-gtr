@@ -39,7 +39,15 @@ function StarField(props) {
 
 export default function StarfieldBackground() {
   return (
-    <div style={{ width: '100%', height: '100%', position: 'fixed', top: 0, left: 0, zIndex: -1, background: 'linear-gradient(to bottom, #000000, #0a2342)' }}>
+    <div style={{ 
+      width: '100%', 
+      height: '100%', 
+      position: 'fixed', 
+      top: 0, 
+      left: 0, 
+      zIndex: -1, 
+      background: 'linear-gradient(to bottom, rgb(115,208,235), rgb(183,218,214))'
+    }}>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <StarField />
       </Canvas>

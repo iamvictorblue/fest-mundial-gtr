@@ -22,24 +22,17 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  const navItems = isCompetitionPage
-    ? [
-        { href: "#description", label: "Description" },
-        { href: "#location", label: "Location" },
-        { href: "#prizes", label: "Prizes" },
-        { href: "#required-piece", label: "Required Piece" },
-        { href: "#preliminary-round", label: "Preliminary" },
-        { href: "#final-stage", label: "Final" },
-        { href: "#stipend", label: "Stipend" },
-        { href: "#jury", label: "Jury" },
-        { href: "#jose-antonio-lopez", label: "José A. López" },
-      ]
-    : [
-        { href: "#home", label: "Inicio" },
-        { href: "#conciertos", label: "Conciertos" },
-        { href: "#simposios", label: "Simposios" },
-        { href: "#cierre", label: "Concierto de Cierre" },
-      ];
+  const navItems = [
+    { href: "#description", label: "Description" },
+    { href: "#location", label: "Location" },
+    { href: "#prizes", label: "Prizes" },
+    { href: "#required-piece", label: "Required Piece" },
+    { href: "#preliminary-round", label: "Preliminary" },
+    { href: "#final-stage", label: "Final" },
+    { href: "#stipend", label: "Stipend" },
+    { href: "#jury", label: "Jury" },
+    { href: "#jose-antonio-lopez", label: "José A. López" },
+  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -54,7 +47,7 @@ const Navbar = () => {
 
   return (
     <motion.nav 
-      className={`fixed top-0 left-0 right-0 w-full z-50 ${isCompetitionPage ? 'bg-[#498FC6]' : 'bg-[#E17055]'}`}
+      className="fixed top-0 left-0 right-0 w-full z-50 bg-[rgb(52,121,150)]"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
@@ -66,8 +59,8 @@ const Navbar = () => {
               <Link to="/">
                 <motion.img
                   className="h-12 w-auto"
-                  src={isCompetitionPage ? competitionLogo : logo}
-                  alt={isCompetitionPage ? "World Guitar Competition" : "Festival Mundial de La Guitarra"}
+                  src={competitionLogo}
+                  alt="World Guitar Competition"
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 />
@@ -88,38 +81,23 @@ const Navbar = () => {
                   {item.label}
                 </motion.a>
               ))}
-              {isCompetitionPage ? (
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  to="/"
+                  className="bg-white text-[#498FC6] py-1 px-3 rounded-md hover:bg-gray-100 transition-all duration-300 text-sm font-bold shadow-md"
                 >
-                  <Link
-                    to="/"
-                    className="bg-white text-[#498FC6] py-1 px-3 rounded-md hover:bg-gray-100 transition-all duration-300 text-sm font-bold shadow-md"
-                  >
-                    Back to Festival
-                  </Link>
-                </motion.div>
-              ) : (
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Link
-                    to="/world-guitar-competition"
-                    className="bg-white text-[#E17055] py-1 px-3 rounded-md hover:bg-gray-100 transition-all duration-300 text-sm font-bold shadow-md"
-                  >
-                    World Guitar Competition
-                  </Link>
-                </motion.div>
-              )}
+                  Back to Festival
+                </Link>
+              </motion.div>
             </div>
           </div>
           <div className="md:hidden">
-            <motion.button
+            <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              whileTap={{ scale: 0.95 }}
+              className="text-white hover:bg-[#3A7CAE] p-2 rounded-md focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
@@ -131,7 +109,7 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               )}
-            </motion.button>
+            </button>
           </div>
         </div>
       </div>
@@ -156,33 +134,18 @@ const Navbar = () => {
                 {item.label}
               </motion.a>
             ))}
-            {isCompetitionPage ? (
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link
+                to="/"
+                className="bg-white text-[#498FC6] block px-3 py-2 rounded-md text-base font-medium"
+                onClick={() => setIsOpen(false)}
               >
-                <Link
-                  to="/"
-                  className="bg-white text-[#498FC6] block px-3 py-2 rounded-md text-base font-medium"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Back to Festival
-                </Link>
-              </motion.div>
-            ) : (
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  to="/world-guitar-competition"
-                  className="bg-white text-[#E17055] block px-3 py-2 rounded-md text-base font-medium"
-                  onClick={() => setIsOpen(false)}
-                >
-                  World Guitar Competition
-                </Link>
-              </motion.div>
-            )}
+                Back to Festival
+              </Link>
+            </motion.div>
           </div>
         </motion.div>
       )}
