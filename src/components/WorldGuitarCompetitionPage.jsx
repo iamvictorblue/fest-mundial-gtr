@@ -152,7 +152,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-4 mb-8 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
+              <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -206,7 +206,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-4 mb-8 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
+              <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -237,7 +237,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-4 mb-8 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
+              <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -303,7 +303,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-4 mb-8 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
+              <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -415,7 +415,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-4 mb-8 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
+              <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -441,7 +441,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-4 mb-8 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
+              <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -481,7 +481,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-4 mb-8 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
+              <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -514,7 +514,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-4 mb-8 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
+              <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -561,7 +561,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-4 mb-8 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
+              <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -668,7 +668,7 @@ const WorldGuitarCompetitionPage = () => {
             <div className="grid md:grid-cols-[2fr,1fr] gap-8 items-start">
               <div className="order-2 md:order-1">
                 <div className="flex flex-col items-center gap-4 mb-8 w-full">
-                  <img src={festLogo} alt="Festival Logo" className="w-20 h-20 object-contain" />
+                  <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
                   <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                     font-['Inter'] tracking-[0.2em] leading-relaxed
                     [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
