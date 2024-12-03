@@ -144,7 +144,7 @@ const WorldGuitarCompetitionPage = () => {
         <AnimateOnScroll animation={fadeInLeft}>
           <section 
             id="description" 
-            className="ml-auto mr-[10%] max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform rotate-1"
+            className="ml-auto mr-[15%] max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform rotate-1"
             style={{
               backgroundImage: `linear-gradient(to bottom, rgba(183, 218, 214, 0.9), rgba(183, 218, 214, 0.9)), url(${beachImage})`,
               backgroundSize: 'cover',
@@ -295,7 +295,7 @@ const WorldGuitarCompetitionPage = () => {
         <AnimateOnScroll animation={fadeInLeft}>
           <section 
             id="required-piece" 
-            className="ml-auto mr-[10%] max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform -rotate-2"
+            className="ml-auto mr-[15%] max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform -rotate-2"
             style={{
               backgroundImage: `linear-gradient(to bottom, rgba(115, 208, 235, 0.9), rgba(115, 208, 235, 0.9)), url(${aerialBeachImage})`,
               backgroundSize: 'cover',

@@ -49,44 +49,46 @@ const Navbar = () => {
     <motion.nav 
       className="fixed top-0 left-0 right-0 w-full z-50 bg-[rgb(95,188,215)]"
     >
-      <div className="max-w-[80vw] mx-auto px-4">
-        <div className="flex items-center justify-center h-20">
-          <div className="flex items-center gap-8">
-            <div className="flex-shrink-0">
-              <Link to="/">
-                <motion.img
-                  className="h-12 w-auto"
-                  src={competitionLogo}
-                  alt="World Guitar Competition"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                />
-              </Link>
-            </div>
-            <div className="hidden md:flex items-center justify-center flex-wrap gap-3">
+      <div className="max-w-[95vw] mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          <div className="flex-shrink-0">
+            <motion.img
+              className="h-12 w-auto cursor-pointer"
+              src={competitionLogo}
+              alt="World Guitar Competition"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              onClick={(e) => scrollToSection(e, "hero")}
+            />
+          </div>
+          <div className="hidden md:flex flex-1 items-center justify-center">
+            <div className="flex flex-wrap justify-center gap-2">
               {navItems.map((item, index) => (
                 <motion.a
                   key={index}
                   href={item.href}
                   onClick={(e) => scrollToSection(e, item.href.slice(1))}
-                  className="text-white hover:bg-white hover:text-[rgb(95,188,215)] px-3 py-2 rounded-md text-sm font-[600] transition-all duration-300 ease-in-out whitespace-nowrap"
+                  className="text-white hover:bg-white hover:text-[rgb(95,188,215)] px-2 py-2 rounded-md text-sm font-[600] transition-all duration-300 ease-in-out whitespace-nowrap"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   {item.label}
                 </motion.a>
               ))}
-              <Link
-                to="/"
-                className="bg-white text-[rgb(95,188,215)] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 text-sm font-[700] shadow-md"
-              >
-                Back to Festival
-              </Link>
             </div>
+          </div>
+          <div className="hidden md:block">
+            <Link
+              to="/"
+              className="bg-white text-[rgb(95,188,215)] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 text-sm font-[700] shadow-md whitespace-nowrap"
+            >
+              Back to Festival
+            </Link>
+          </div>
+          <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-[rgb(83,153,208)] focus:outline-none"
-              aria-expanded="false"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-[rgb(83,153,208)] focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
