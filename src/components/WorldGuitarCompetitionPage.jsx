@@ -151,7 +151,7 @@ const WorldGuitarCompetitionPage = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+            <div className="flex flex-col items-center gap-4 mb-6 w-full">
               <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
@@ -160,9 +160,9 @@ const WorldGuitarCompetitionPage = () => {
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The aim of the <span className="font-space-grotesk font-semibold">José Antonio López World Guitar Competition</span> is to reward 
-              <span className="font-inter italic"> artistic expression</span> and
-              <span className="font-chunky"> musicality</span> in classical guitar performance.
+              The primary objective of the <span className="font-bold">José Antonio López World Guitar Competition</span> is to celebrate and reward 
+              <span className="italic"> artistic expression</span> and 
+              <span className="font-bold">musicality</span> in classical guitar performance.
             </p>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
@@ -205,7 +205,7 @@ const WorldGuitarCompetitionPage = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+            <div className="flex flex-col items-center gap-4 mb-6 w-full">
               <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
@@ -214,13 +214,12 @@ const WorldGuitarCompetitionPage = () => {
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The José Antonio López World Guitar Competition will be held at the Symphonic Hall, San Juan,
-              Puerto Rico.
+              The José Antonio López World Guitar Competition will be held in Mayagüez, Puerto Rico.
             </p>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">
               <strong className="font-space-grotesk [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Date:</strong> 
-              <span className="font-inter">Sunday, May 4, 2025.</span>
+              <span className="font-inter">Saturday, May 3, 2025.</span>
             </p>
           </section>
         </AnimateOnScroll>
@@ -236,7 +235,7 @@ const WorldGuitarCompetitionPage = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+            <div className="flex flex-col items-center gap-4 mb-6 w-full">
               <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
@@ -251,7 +250,7 @@ const WorldGuitarCompetitionPage = () => {
                   <span className="text-2xl md:text-3xl font-[600] text-white mr-2 
                     font-['Inter'] tracking-wider
                     [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]">1st Place</span>
-                  <span className="text-xl md:text-2xl font-[500] text-white">$7,000</span>
+                  <span className="text-xl md:text-2xl font-[500] text-white">$5,000</span>
                 </div>
               </div>
               
@@ -302,7 +301,7 @@ const WorldGuitarCompetitionPage = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+            <div className="flex flex-col items-center gap-4 mb-6 w-full">
               <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
@@ -330,7 +329,7 @@ const WorldGuitarCompetitionPage = () => {
                   body: new URLSearchParams(new FormData(form)).toString()
                 })
                   .then(() => {
-                    alert("Form submitted successfully! Check your email for the download link.");
+                    window.location.href = "/path-to-your-pdf/GuitarraPoética.pdf";
                     form.reset();
                   })
                   .catch(error => alert(error));
@@ -414,7 +413,7 @@ const WorldGuitarCompetitionPage = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+            <div className="flex flex-col items-center gap-4 mb-6 w-full">
               <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
@@ -440,7 +439,7 @@ const WorldGuitarCompetitionPage = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+            <div className="flex flex-col items-center gap-4 mb-6 w-full">
               <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
@@ -480,7 +479,7 @@ const WorldGuitarCompetitionPage = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+            <div className="flex flex-col items-center gap-4 mb-6 w-full">
               <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
@@ -513,7 +512,7 @@ const WorldGuitarCompetitionPage = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+            <div className="flex flex-col items-center gap-4 mb-6 w-full">
               <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
@@ -560,7 +559,7 @@ const WorldGuitarCompetitionPage = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="flex flex-col items-center gap-4 mb-8 w-full">
+            <div className="flex flex-col items-center gap-4 mb-6 w-full">
               <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
@@ -568,7 +567,7 @@ const WorldGuitarCompetitionPage = () => {
                 border-b-2 border-white/30 pb-2 uppercase w-full">International Jury</h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-9">
               <motion.div 
                 className="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-xl"
                 whileHover={{ 
@@ -645,7 +644,7 @@ const WorldGuitarCompetitionPage = () => {
                 </div>
               </motion.div>
             </div>
-            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
+            <p className="text-base md:text-xl mt-8 mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The José Antonio López World Guitar Competition has selected renowned artists from the
               international music scene as members of the jury. These distinguished jury members lend prestige
@@ -665,9 +664,9 @@ const WorldGuitarCompetitionPage = () => {
               backgroundPosition: 'center',
             }}
           >
-            <div className="grid md:grid-cols-[2fr,1fr] gap-8 items-start">
+            <div className="grid md:grid-cols-[2fr,1fr] gap-8 items-center">
               <div className="order-2 md:order-1">
-                <div className="flex flex-col items-center gap-4 mb-8 w-full">
+                <div className="flex flex-col items-center gap-4 mb-6 w-full">
                   <img src={festLogo} alt="Festival Logo" className="w-36 h-36 object-contain" />
                   <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                     font-['Inter'] tracking-[0.2em] leading-relaxed
@@ -706,7 +705,7 @@ const WorldGuitarCompetitionPage = () => {
                 </p>
               </div>
               <motion.div 
-                className="order-1 md:order-2"
+                className="order-1 md:order-2 flex items-center"
                 whileHover={{ 
                   scale: 1.05,
                   rotate: [0, -5, 5, -5, 0],
