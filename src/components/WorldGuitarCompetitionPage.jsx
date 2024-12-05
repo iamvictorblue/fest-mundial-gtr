@@ -306,42 +306,68 @@ const WorldGuitarCompetitionPage = () => {
               will be available for download on the event's official website.
             </p>
 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div className="w-full aspect-video rounded-xl overflow-hidden shadow-xl">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/HMYLFJv0Jbs" 
+                  title="Guitarra Poética (Homenaje a Manuel Bellido)" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="w-full aspect-video rounded-xl overflow-hidden shadow-xl">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/6Xq3ue1-w2w" 
+                  title="José Antonio López en vivo desde Granada, España." 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+
             <form 
               name="score-download" 
               method="POST" 
               data-netlify="true" 
               data-netlify-honeypot="bot-field"
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
                 const form = e.target;
-                fetch("/", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                  body: new URLSearchParams(new FormData(form)).toString()
-                })
-                  .then(() => {
-                    window.location.href = "/path-to-your-pdf/GuitarraPoética.pdf";
-                    form.reset();
-                  })
-                  .catch(error => alert(error));
+                try {
+                  // First submit the form to Netlify
+                  await fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(new FormData(form)).toString()
+                  });
+
+                  // Then trigger the PDF download
+                  const link = document.createElement('a');
+                  link.href = '/GuitarraPoética.pdf'; // Path to your PDF in public folder
+                  link.download = 'GuitarraPoética.pdf'; // Name for the downloaded file
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+
+                  // Reset the form
+                  form.reset();
+                  alert('Thank you for your submission! The PDF download should begin automatically.');
+                } catch (error) {
+                  alert('There was an error processing your request. Please try again.');
+                  console.error(error);
+                }
               }}
               className="max-w-lg mx-auto mb-8 space-y-6 bg-black/20 p-6 rounded-lg"
             >
               <input type="hidden" name="form-name" value="score-download" />
               <input type="hidden" name="bot-field" />
               
-              <p>
-                <label className="text-xl font-[700] [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
-                  Full Name:
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    className="w-full px-4 py-3 mt-2 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
-                  />
-                </label>
-              </p>
-
               <p>
                 <label className="text-xl font-[700] [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
                   Age:
