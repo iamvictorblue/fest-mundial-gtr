@@ -331,91 +331,15 @@ const WorldGuitarCompetitionPage = () => {
               </div>
             </div>
 
-            <form 
-              name="score-download" 
-              method="POST" 
-              data-netlify="true" 
-              data-netlify-honeypot="bot-field"
-              onSubmit={async (e) => {
-                e.preventDefault();
-                const form = e.target;
-                try {
-                  // First submit the form to Netlify
-                  await fetch("/", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: new URLSearchParams(new FormData(form)).toString()
-                  });
-
-                  // Then trigger the PDF download
-                  const link = document.createElement('a');
-                  link.href = '/GuitarraPoética.pdf'; // Path to your PDF in public folder
-                  link.download = 'GuitarraPoética.pdf'; // Name for the downloaded file
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-
-                  // Reset the form
-                  form.reset();
-                  alert('Thank you for your submission! The PDF download should begin automatically.');
-                } catch (error) {
-                  alert('There was an error processing your request. Please try again.');
-                  console.error(error);
-                }
-              }}
-              className="max-w-lg mx-auto mb-8 space-y-6 bg-black/20 p-6 rounded-lg"
-            >
-              <input type="hidden" name="form-name" value="score-download" />
-              <input type="hidden" name="bot-field" />
-              
-              <p>
-                <label className="text-xl font-[700] [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
-                  Age:
-                  <input
-                    type="number"
-                    name="age"
-                    required
-                    min="1"
-                    max="120"
-                    className="w-full px-4 py-3 mt-2 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
-                  />
-                </label>
-              </p>
-
-              <p>
-                <label className="text-xl font-[700] [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
-                  Country of Residence:
-                  <input
-                    type="text"
-                    name="country"
-                    required
-                    className="w-full px-4 py-3 mt-2 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
-                  />
-                </label>
-              </p>
-
-              <p>
-                <label className="text-xl font-[700] [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">
-                  Email:
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 mt-2 rounded bg-white/20 border border-white/30 text-white text-lg font-[400] focus:outline-none focus:border-[#498FC6]"
-                  />
-                </label>
-              </p>
-
-              <div className="flex justify-center gap-4 mt-6">
-                <button 
-                  type="submit"
-                  className="inline-block bg-[#498FC6] text-white py-3 px-6 rounded-full hover:bg-[#3A7CAE] transition-colors text-center font-[700] text-lg shadow-md hover:shadow-lg"
-                >
-                  Download Score (PDF)
-                </button>
-                
-              </div>
-            </form>
+            <div className="flex justify-center mt-8">
+              <a 
+                href="/public/GuitarraPoética.pdf" 
+                download="GuitarraPoética.pdf"
+                className="inline-block bg-[#498FC6] text-white py-3 px-6 rounded-full hover:bg-[#3A7CAE] transition-colors text-center font-[700] text-lg shadow-md hover:shadow-lg"
+              >
+                Download Score (PDF)
+              </a>
+            </div>
           </section>
         </AnimateOnScroll>
 
