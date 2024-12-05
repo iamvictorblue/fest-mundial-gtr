@@ -160,36 +160,28 @@ const WorldGuitarCompetitionPage = () => {
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The primary objective of the <span className="font-bold">José Antonio López World Guitar Competition</span> is to celebrate and reward 
-              <span className="italic"> artistic expression</span> and 
-              <span className="font-bold">musicality</span> in classical guitar performance.
+              The primary objective of the <span className="font-bold italic">José Antonio López World Guitar Competition</span> is to celebrate and reward 
+              artistic expression and musicality in classical guitar performance.
             </p>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              With $18,000 in prizes, the competition invites guitarists from around the world to revive the
-              interpretative styles evoked by legendary figures such as Julian Bream (England), Alirio Díaz
-              (Venezuela), and Leonardo Egúrbida (Puerto Rico). This competition encourages guitarists
-              worldwide to bring back the lyricism and tonal colors that make classical guitar unique.
+              With $16,000 in prizes, the competition aims to inspire guitarists worldwide to revive the lyricism and tonal richness
+              that define classical guitar. It also seeks to rekindle the interpretative styles popularized by legendary figures such 
+              as Julian Bream (England), Alirio Díaz (Venezuela), and Leonardo Egúrbida (Puerto Rico).
             </p>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The competition will be held as part of the World Guitar Festival, an event dedicated to the guitar,
-              featuring the most important luthiers in the world. Participants will include Andrea Tacchi (Italy),
-              Gerhard Oldiges (Germany), Gerardo Escobedo (Mexico), Alberto Martínez from Orfeo Magazine
-              (Uruguay/Paris), and the collector José Luis Postigo (Seville, Spain).
+              The competition will take place as part of the <span className="font-bold"> Festival Mundial de la Guitarra</span>, 
+              a global event celebrating the art of guitar, featuring some of the world's most renowned luthiers. 
+              For the 2025 edition, participants will include Andrea Tacchi (Italy), Gerhard Oldiges (Germany), Gerardo Escobedo (Mexico), 
+              Alberto Martínez from <span className="italic">Orfeo Magazine</span> (Uruguay/Paris), and the distinguished collector José Luis Postigo (Seville, Spain).
             </p>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The featured concerts will be performed by Yamandú Costa (Croatia) and Leonela Alejandro
-              (Puerto Rico). In addition, two Café Concerts, titled "Guitar Tasting," will be offered, featuring
-              virtuosos Iván Rijos (Puerto Rico) and Marcus Toscano (Brazil).
-            </p>
-            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words font-bold
-              [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The event will conclude with the Gustavo and Beatriz Arvelo National Guitar Competition, where
-              the audience will enjoy the most talented young Puerto Rican guitarists between the ages of 10
-              and 18. A series of masterclasses by guest artists will complement this grand international
-              gathering dedicated to the guitar.
+              The festival’s featured concerts will include a performance by GFA winner Leonela Alejandro (Puerto Rico). Additionally, 
+              two <span className="italic">Café Concerts</span> titled "<span className="italic">Guitar Tasting</span>" will be presented, featuring virtuoso guitarists Iván Rijos (Puerto Rico) and 
+              Marcus Toscano (Brazil). To further enrich this grand international gathering, a series of masterclasses conducted by guest artists 
+              will also be offered.
             </p>
           </section>
         </AnimateOnScroll>
@@ -214,12 +206,12 @@ const WorldGuitarCompetitionPage = () => {
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The José Antonio López World Guitar Competition will be held in Mayagüez, Puerto Rico.
+              The <span className="font-bold italic">José Antonio López World Guitar Competition</span> will be held in Mayagüez, Puerto Rico.
             </p>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">
-              <strong className="font-space-grotesk [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Date:</strong> 
-              <span className="font-inter">Saturday, May 3, 2025.</span>
+              <strong className="font-space-grotesk [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Date: </strong> 
+              <span className="font-bold">Saturday, May 3, 2025.</span>
             </p>
           </section>
         </AnimateOnScroll>
@@ -281,10 +273,9 @@ const WorldGuitarCompetitionPage = () => {
                 Audience Award
               </h3>
               <p className="text-base md:text-xl mb-4 font-[500] [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)] mix-blend-luminosity">
-                This will be awarded for the best performance of the required piece, "Guitarra
-                Poética," by composer José Antonio López. The prize will consist of a "Replica of Antonio de
-                Torres" concert guitar, valued at $5,000, built by the world-renowned luthier Gerardo Escobedo
-                from Paracho, Mexico.
+              This prize will be awarded for the best performance of the required piece, "<span className="italic">Guitarra Poética</span>," composed by José Antonio López. 
+              The award consists of a "Replica of Antonio de Torres" concert guitar, valued at $5,000, crafted by the world-renowned luthier 
+              Gerardo Escobedo from Paracho, Mexico.
               </p>
             </div>
           </section>
@@ -294,7 +285,7 @@ const WorldGuitarCompetitionPage = () => {
         <AnimateOnScroll animation={fadeInLeft}>
           <section 
             id="required-piece" 
-            className="ml-auto mr-[15%] max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform -rotate-2"
+            className="ml-auto mr-[15%] max-w-3xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden"
             style={{
               backgroundImage: `linear-gradient(to bottom, rgba(115, 208, 235, 0.9), rgba(115, 208, 235, 0.9)), url(${aerialBeachImage})`,
               backgroundSize: 'cover',
@@ -310,9 +301,9 @@ const WorldGuitarCompetitionPage = () => {
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The competition requires each contestant to perform the piece &quot;Guitarra Poética&quot; (Homage to
-              Manuel Bellido) by Puerto Rican composer José Antonio López. The PDF score, audio sample,
-              and several YouTube videos are available for download below.
+              The competition requires each contestant to perform the piece "<span className="italic">Guitarra Poética</span>" (Homage to Manuel Bellido) 
+              composed by Puerto Rican composer José Antonio López. The PDF score, audio samples, and several YouTube videos 
+              will be available for download on the event's official website.
             </p>
 
             <form 
@@ -422,8 +413,7 @@ const WorldGuitarCompetitionPage = () => {
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The José Antonio López World Guitar Competition is an open category event with no age limit for
-              participation.
+              The <span className="font-bold italic">José Antonio López World Guitar Competition</span> is an open category event with no age restrictions for participation.
             </p>
           </section>
         </AnimateOnScroll>
@@ -448,21 +438,25 @@ const WorldGuitarCompetitionPage = () => {
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The José Antonio López World Guitar Competition requires an initial elimination phase, which
-              will consist of the performance of the required piece titled "Guitarra Poética." This performance
-              must be submitted via a YouTube video no later than March 30, 2025.
+              The <span className="font-bold italic">José Antonio López World Guitar Competition </span>begins with an initial elimination phase, 
+              which requires contestants to perform the mandatory piece titled “<span className="italic">Guitarra Poética</span>” This performance must be submitted as a 
+              YouTube video no later than March 30, 2025.
+              <br>
+              </br>
+              <br>
+              </br>
+              In the video, each contestant must include a brief personal introduction before the performance, stating their full name, 
+              country of origin, the name of the competition, and the title of the piece.
+              Additionally, participants must submit the registration form, which can be downloaded from the official website, 
+              along with the video link. Both the video link and the registration form should be sent to the following email address:{' '}
+              <a 
+                href="mailto:jalworldguitarcompetition@gmail.com" 
+                className="text-white hover:text-[#498FC6] underline transition-colors duration-200"
+              >
+                jalworldguitarcompetition@gmail.com
+              </a>
             </p>
-            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
-              [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              In the video, each contestant must include a personal introduction before the performance, stating
-              their full name, country of origin, the name of the competition, and the title of the piece.
-            </p>
-            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
-              [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              Along with the video, participants must submit the registration form, which can be downloaded
-              from our website, accompanied by the video link. Both, the video link and the registration form
-              should be sent to the following email address: jalwgc@gmail.com
-            </p>
+            
             <a href="#" className="text-[#498FC6] hover:underline 
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)]">Registration form: Click Here</a>
           </section>
@@ -488,15 +482,14 @@ const WorldGuitarCompetitionPage = () => {
             </div>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The final stage of the José Antonio López World Guitar Competition will be held in person on May
-              4, 2025, at Pablo Casals Symphony Hall of the Centro de Bellas Artes de Santurce in San Juan, Puerto Rico.
-            </p>
-            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
-              [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              In the first round of the final stage, the three finalists, selected in alphabetical order, will perform
-              the required piece, "Guitarra Poética" by José Antonio López. In the second round, the finalists
-              will present a free repertoire with a duration of 20 minutes. (The selection of the repertoire and the
-              approach to interpretation must align with the competition&apos;s description).
+              The final stage of the <span className="font-bold italic">José Antonio López World Guitar Competition</span> will take place in person on <span className="font-bold">May 3, 2025</span>, in <span className="font-bold">Puerto Rico</span>.
+              <br>
+              </br>
+              <br>
+              </br>
+              During the first round of the final stage, the three finalists, selected in alphabetical order, will perform the required piece,
+               "<span className="italic">Guitarra Poética</span>" by José Antonio López. In the second round, the finalists will present a free-choice repertoire with a maximum duration 
+               of 20 minutes. The repertoire selection and interpretative approach must align with the competition’s guidelines.
             </p>
           </section>
         </AnimateOnScroll>
@@ -524,26 +517,19 @@ const WorldGuitarCompetitionPage = () => {
               [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Flights</h3>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The three selected finalists will receive a $500 stipend to help cover their flight expenses. It is
-              important to note that, as Puerto Rico is a U.S. territory, each contestant must ensure they meet the
-              necessary visa requirements to enter U.S. territory.
-            </p>
-            <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
-              [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              When purchasing airline tickets, we recommend flying into either San Juan Airport or Aguadilla
-              Airport. San Juan Airport is two and a half hours from Mayagüez, while Aguadilla Airport is 45
-              minutes from the city. San Juan receives daily flights from various parts of the U.S. and also direct
-              flights from Europe. Aguadilla offers direct flights from New York and Orlando, Florida.
+              The three selected finalists will each receive a $500 stipend to assist with their flight expenses. 
+              (Please note that, as Puerto Rico is a U.S. territory, each contestant must ensure they meet the necessary visa 
+              requirements for entry into the United States.) When booking airline tickets, it is recommended to fly into San Juan Airport.
             </p>
             <h3 className="text-2xl font-[600] text-white mb-4 
               font-['Inter'] tracking-wider
               [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Hotel and Transportation</h3>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The José Antonio López World Guitar Competition will provide three nights of accommodation
-              for the three finalists, as well as internal transportation. Additionally, the day after the competition,
-              we will organize a trip to the beautiful beaches of Puerto Rico for all participants of the World
-              Guitar Festival. Remember, in Puerto Rico, we enjoy only one season all year long: Summer!
+              The <span className="font-bold italic">José Antonio López World Guitar Competition</span> will provide three nights of accommodation for the three finalists, 
+              along with internal transportation. Additionally, the day after the competition, we will organize a trip to the beautiful 
+              beaches of Puerto Rico (as the one in the poster) for all participants of the World Guitar Festival. Please note that Puerto Rico 
+              enjoys a single season throughout the year: summer!
             </p>
           </section>
         </AnimateOnScroll>
@@ -567,32 +553,7 @@ const WorldGuitarCompetitionPage = () => {
                 border-b-2 border-white/30 pb-2 uppercase w-full">International Jury</h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-9">
-              <motion.div 
-                className="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-xl"
-                whileHover={{ 
-                  scale: 1.05,
-                  rotateY: 5,
-                  transition: { duration: 0.3 }
-                }}
-              >
-                <div className="flex flex-col items-center">
-                  <motion.div 
-                    className="w-full aspect-square overflow-hidden rounded-lg shadow-lg mb-4"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <img 
-                      src={juryImage1} 
-                      alt="Sergio Assad" 
-                      className="w-full h-full object-cover object-center"
-                    />
-                  </motion.div>
-                  <h3 className="text-xl font-[700] text-center 
-                    [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Composer Sergio Assad</h3>
-                  <p className="text-center text-gray-300">President of the Jury</p>
-                </div>
-              </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-9">
               <motion.div 
                 className="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-xl"
                 whileHover={{ 
@@ -646,9 +607,14 @@ const WorldGuitarCompetitionPage = () => {
             </div>
             <p className="text-base md:text-xl mt-8 mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The José Antonio López World Guitar Competition has selected renowned artists from the
-              international music scene as members of the jury. These distinguished jury members lend prestige
-              to the competition and will be following the performances from their respective countries via live broadcast on YouTube.
+              The <span className="font-bold italic">José Antonio López World Guitar Competition</span> has appointed renowned artists from the international music scene 
+              as members of the jury. The distinguished panel includes Pablo Martos (violinist) and Alberto Martos (cellist) from Spain, 
+              Alfredo Minetti (pianist) from Uruguay, and Richard Scofano (composer and bandoneonist) from Argentina.
+              <br>
+              </br>
+              <br>
+              </br>
+              (It is important to note that the jury members will follow the competition from their respective countries via a live broadcast on YouTube.)
             </p>
           </section>
         </AnimateOnScroll>
@@ -675,33 +641,22 @@ const WorldGuitarCompetitionPage = () => {
                 </div>
                 <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
                   [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-                  Retired guitarist and composer <span className="font-space-grotesk font-semibold">José Antonio López</span> holds a 
-                  <span className="font-inter italic">doctorate from the prestigious Indiana University School of Music</span>, a 
-                  <span className="font-chunky">Master's degree</span> from Arizona State University, and a 
-                  <span className="font-space-grotesk">Bachelor's degree</span> from the Conservatory of Music of Puerto Rico.
+                  Retired concert guitarist José Antonio López holds a 
+                  Doctorate from the prestigious Indiana University School of Music, a 
+                  Master's degree from Arizona State University, and a 
+                  Bachelor's degree from the Conservatory of Music of Puerto Rico.
                 </p>
                 <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
                   [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-                  With a successful career spanning more than 30 years as a guitar soloist,
-                  his performances with major symphony orchestras across the
-                  hemisphere stand out. Through his Centro de Estudios Guitarrísticos in
-                  Puerto Rico, he has trained an entire generation of virtuoso guitarists
-                  who now dominate the contemporary Puerto Rican guitar scene.
+                  With a distinguished career spanning more than 30 years as a guitar soloist, he is recognized for his performances with major symphony orchestras throughout the Americas. Through his <span className="font-bold ">Centro de Estudios Guitarrísticos</span> in Puerto Rico, he has mentored an entire generation of virtuoso guitarists who now dominate the contemporary Puerto Rican guitar scene.
                 </p>
                 <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
                   [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-                  Moreover, as a professor and researcher at the University of Puerto Rico
-                  at Mayagüez, he has contributed to an extensive discography and
-                  numerous publications focused on concert guitar and the bolero genre,
-                  including his most ambitious project: an encyclopedia on Juan Neri and
-                  the trio Los Tres Ases, which will be accompanied by a documentary
-                  film.
+                  As a professor and researcher at the University of Puerto Rico at Mayagüez, he has made significant contributions to the field, including an extensive discography and numerous publications on concert guitar and the bolero genre. His most ambitious project to date is an encyclopedia on Juan Neri and the trio <span className="italic">Los Tres Ases</span>, which will also feature an accompanying documentary film.
                 </p>
                 <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
                   [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-                  He is currently enjoying his retirement from performing and teaching,
-                  dedicating his time entirely to composition and traveling the world in
-                  search of his dream guitar.
+                  Currently retired from performing and teaching, he devotes his time entirely to composition and traveling the world in search of his dream guitar. In 2020, he published <span className="italic">Opus 1, No.1</span>, a collection of 36 concert works for solo guitar.
                 </p>
               </div>
               <motion.div 
