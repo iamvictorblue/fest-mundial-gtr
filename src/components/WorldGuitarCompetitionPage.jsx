@@ -333,7 +333,7 @@ const WorldGuitarCompetitionPage = () => {
 
             <div className="flex justify-center mt-8">
               <a 
-                href="/public/GuitarraPoética.pdf" 
+                href="/GuitarraPoética.pdf" 
                 download="GuitarraPoética.pdf"
                 className="inline-block bg-[#498FC6] text-white py-3 px-6 rounded-full hover:bg-[#3A7CAE] transition-colors text-center font-[700] text-lg shadow-md hover:shadow-lg"
               >
