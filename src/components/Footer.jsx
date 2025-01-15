@@ -1,9 +1,12 @@
-import React from 'react';
+import { useLocation } from 'react-router-dom';
 import festLogo from "../assets/fest copy.png";
 
 const Footer = () => {
+  const location = useLocation();
+  const isCompetitionPage = location.pathname === '/competition';
+
   return (
-    <footer className="mt-20 py-6 bg-[rgb(95,188,215)]">
+    <footer className={`py-6 ${isCompetitionPage ? 'bg-[rgb(95,188,215)]' : 'bg-[#FF7F50]'}`}>
       <div className="container mx-auto px-4 flex justify-center">
         <img 
           src={festLogo} 
