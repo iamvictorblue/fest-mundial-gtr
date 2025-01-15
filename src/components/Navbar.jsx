@@ -7,7 +7,7 @@ import competitionLogo from "../assets/competition-logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const isCompetitionPage = location.pathname === '/competition';
+  const isFestivalPage = location.pathname.includes('festival');
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -44,19 +44,19 @@ const Navbar = () => {
     { href: "#jose-antonio-lopez", label: "José A. López" },
   ];
 
-  const navItems = isCompetitionPage ? competitionNavItems : festivalNavItems;
+  const navItems = isFestivalPage ? festivalNavItems : competitionNavItems;
 
   return (
     <motion.nav 
-      className={`fixed top-0 left-0 right-0 w-full z-50 ${isCompetitionPage ? 'bg-[rgb(95,188,215)]' : 'bg-[#FF7F50]'}`}
+      className={`fixed top-0 left-0 right-0 w-full z-50 ${isFestivalPage ? 'bg-[#FF7F50]' : 'bg-[rgb(95,188,215)]'}`}
     >
       <div className="max-w-[95vw] mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <motion.img
               className="h-12 w-auto cursor-pointer"
-              src={isCompetitionPage ? competitionLogo : logo}
-              alt={isCompetitionPage ? "World Guitar Competition" : "Festival Mundial"}
+              src={isFestivalPage ? logo : competitionLogo}
+              alt={isFestivalPage ? "Festival Mundial" : "World Guitar Competition"}
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
               onClick={(e) => scrollToSection(e, "hero")}
@@ -79,19 +79,19 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            {isCompetitionPage ? (
+            {isFestivalPage ? (
               <Link
                 to="/"
                 className="bg-white text-[rgb(95,188,215)] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 text-sm font-[700] shadow-md whitespace-nowrap"
               >
-                Back to Festival
+                JAL World Guitar Competition
               </Link>
             ) : (
               <Link
-                to="/competition"
+                to="/festival"
                 className="bg-white text-[#FF7F50] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 text-sm font-[700] shadow-md whitespace-nowrap"
               >
-                JAL World Guitar Competition
+                Festival Mundial de la Guitarra
               </Link>
             )}
           </div>
@@ -118,7 +118,7 @@ const Navbar = () => {
       {/* Mobile menu with updated styling */}
       {isOpen && (
         <motion.div 
-          className={`md:hidden absolute left-0 right-0 ${isCompetitionPage ? 'bg-[rgb(95,188,215)]' : 'bg-black'} px-4 pt-2 pb-4 shadow-lg`}
+          className={`md:hidden absolute left-0 right-0 ${isFestivalPage ? 'bg-[#FF7F50]' : 'bg-[rgb(95,188,215)]'} px-4 pt-2 pb-4 shadow-lg`}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
@@ -130,7 +130,7 @@ const Navbar = () => {
               href={item.href}
               onClick={(e) => scrollToSection(e, item.href.slice(1))}
               className={`block px-3 py-2 rounded-md text-base font-[500] ${
-                isCompetitionPage 
+                isFestivalPage 
                   ? 'text-white hover:bg-white hover:text-[rgb(95,188,215)]' 
                   : 'text-[#FFD700] hover:bg-[#FFD700] hover:text-black'
               } transition-all duration-200`}
@@ -139,21 +139,21 @@ const Navbar = () => {
               {item.label}
             </motion.a>
           ))}
-          {isCompetitionPage ? (
+          {isFestivalPage ? (
             <Link
               to="/"
               className="block mt-4 px-3 py-2 rounded-md text-base font-[700] bg-white text-[rgb(95,188,215)]"
               onClick={() => setIsOpen(false)}
             >
-              Back to Festival
+              JAL World Guitar Competition
             </Link>
           ) : (
             <Link
-              to="/competition"
-              className="block mt-4 px-3 py-2 rounded-md text-base font-[700] bg-[#FFD700] text-black"
+              to="/festival"
+              className="block mt-4 px-3 py-2 rounded-md text-base font-[700] bg-white text-[#FF7F50]"
               onClick={() => setIsOpen(false)}
             >
-              Guitar Competition
+              Festival Mundial de la Guitarra
             </Link>
           )}
         </motion.div>
