@@ -285,12 +285,40 @@ const FestivalPage = () => {
               <h2 className="text-3xl font-bold mb-8 text-white border-b-2 border-white/20 pb-2 text-center">
                 Festival Mundial de la Guitarra 2024
               </h2>
-              <div className="text-center">
+              <div className="text-center space-y-8">
                 <img 
                   src={concursoImage}
                   alt="Festival Mundial 2024"
                   className="w-full max-w-xl mx-auto rounded-lg shadow-lg mb-4"
                 />
+                {/* YouTube Embeds */}
+                <div className="space-y-8">
+                  {/* Concierto de Finalistas Video */}
+                  <div className="relative pt-[56.32%] w-full">
+                    <iframe
+                      className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                      src="https://www.youtube.com/embed/4ys2KLiY574"
+                      title="Concierto de Finalistas, Concurso Nacional Gustavo y Beatriz Arvelo"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
+                  
+                  {/* Simposio Video */}
+                  <div className="relative pt-[56.25%] w-full max-w-[400px] mx-auto">
+                    <iframe
+                      className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                      src="https://www.youtube.com/embed/mODYpFhwHEA"
+                      title='Simposio- "Festival Mundial de la Guitarra"'
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </section>
