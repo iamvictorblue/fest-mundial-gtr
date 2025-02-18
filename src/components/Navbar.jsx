@@ -15,11 +15,15 @@ const Navbar = () => {
 
   const scrollToSection = (e, sectionId) => {
     e.preventDefault();
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const yOffset = -80; // height of navbar plus some padding
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+    if (sectionId === "hero") {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const yOffset = -80;
+        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
     }
     setIsOpen(false);
   };
@@ -64,6 +68,9 @@ const Navbar = () => {
               onClick={(e) => scrollToSection(e, "hero")}
             />
           </div>
+          <div className="md:hidden text-white text-center font-[600] text-sm px-2">
+            {isCompetitionPage ? 'Jose Antonio López World Guitar Competition' : 'Festival Mundial de la Guitarra'}
+          </div>
           <div className="hidden md:flex flex-1 items-center justify-center">
             <div className="flex flex-wrap justify-center gap-2">
               {navItems.map((item, index) => (
@@ -84,6 +91,7 @@ const Navbar = () => {
             {isCompetitionPage ? (
               <Link
                 to="/"
+                onClick={() => window.scrollTo(0, 0)}
                 className="bg-white text-[#FF7F50] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 text-sm font-[700] shadow-md whitespace-nowrap"
               >
                 Festival Mundial de la Guitarra
@@ -91,6 +99,7 @@ const Navbar = () => {
             ) : (
               <Link
                 to="/competition"
+                onClick={() => window.scrollTo(0, 0)}
                 className="bg-white text-[#FF7F50] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 text-sm font-[700] shadow-md whitespace-nowrap"
               >
                 JAL World Guitar Competition
@@ -146,16 +155,22 @@ const Navbar = () => {
           {isCompetitionPage ? (
             <Link
               to="/"
+              onClick={() => {
+                setIsOpen(false);
+                window.scrollTo(0, 0);
+              }}
               className="block mt-4 px-3 py-2 rounded-md text-base font-[700] bg-white text-[rgb(95,188,215)]"
-              onClick={() => setIsOpen(false)}
             >
               Festival Mundial de la Guitarra
             </Link>
           ) : (
             <Link
               to="/competition"
+              onClick={() => {
+                setIsOpen(false);
+                window.scrollTo(0, 0);
+              }}
               className="block mt-4 px-3 py-2 rounded-md text-base font-[700] bg-white text-[#FF7F50]"
-              onClick={() => setIsOpen(false)}
             >
               JAL World Guitar Competition
             </Link>
