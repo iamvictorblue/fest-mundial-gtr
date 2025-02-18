@@ -1,5 +1,16 @@
+# Handle SPA routing first
+/*    /index.html   200
 
+# Domain-specific routing
+/    /competition    200   Domain=jalworldguitarcompetition.com
+/    /              200   Domain=festivalmundialdelaguitarra.com
 
+# Handle /competition route specifically
+/competition    /index.html   200
+/competition/*  /index.html   200
+
+# Redirect root of competition domain to competition page
+/    /competition    302   Domain=jalworldguitarcompetition.com
 
 # Redirect competition domain to competition page
 https://jalworldguitarcompetition.com/* https://festivalmundialdelaguitarra.com/competition 301!
