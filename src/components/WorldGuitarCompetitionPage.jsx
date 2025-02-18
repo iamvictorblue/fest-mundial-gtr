@@ -7,7 +7,6 @@ import juryImage1 from "../assets/jury-image.png";
 import juryImage2 from "../assets/jury-image-2.png";
 import juryImage3 from "../assets/jury-image-3.png";
 import joseAntonioLopezImage from "../assets/jose-antonio-lopez.png";
-import StarfieldBackground from './StarfieldBackground';
 import festLogo from "../assets/fest copy.png";
 import beachImage from "../assets/beach-image.png";
 import aerialBeachImage from "../assets/aerial-beach-image.png";
@@ -119,8 +118,17 @@ const styles = {
 
 const WorldGuitarCompetitionPage = () => {
   return (
-    <div className="min-h-screen font-manrope-regular relative text-white text-base">
-      <StarfieldBackground />
+    <div className="min-h-screen font-manrope-regular relative text-white text-base bg-[rgb(115,208,235)]">
+      {/* Background decorative images */}
+      <div 
+        className="fixed top-0 left-0 w-1/4 h-screen opacity-10 bg-contain bg-left bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: `url(${competitionImage})` }}
+      />
+      <div 
+        className="fixed top-0 right-0 w-1/4 h-screen opacity-10 bg-contain bg-right bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: `url(${competitionImage})` }}
+      />
+
       <div className="max-w-6xl mx-auto py-24 px-6 space-y-24 relative z-10">
         {/* Hero Section - Full width and centered */}
         <AnimateOnScroll animation={fadeInUp}>
@@ -178,7 +186,7 @@ const WorldGuitarCompetitionPage = () => {
             </p>
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The festival’s featured concerts will include a performance by GFA winner Leonela Alejandro (Puerto Rico). Additionally, 
+              The festival's featured concerts will include a performance by GFA winner Leonela Alejandro (Puerto Rico). Additionally, 
               two <span className="italic">Café Concerts</span> titled "<span className="italic">Guitar Tasting</span>" will be presented, featuring virtuoso guitarists Iván Rijos (Puerto Rico) and 
               Marcus Toscano (Brazil). To further enrich this grand international gathering, a series of masterclasses conducted by guest artists 
               will also be offered.
@@ -389,7 +397,7 @@ const WorldGuitarCompetitionPage = () => {
             <p className="text-base md:text-xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
               The <span className="font-bold italic">José Antonio López World Guitar Competition </span>begins with an initial elimination phase, 
-              which requires contestants to perform the mandatory piece titled “<span className="italic">Guitarra Poética</span>” This performance must be submitted as a 
+              which requires contestants to perform the mandatory piece titled "<span className="italic">Guitarra Poética</span>" This performance must be submitted as a 
               YouTube video no later than March 30, 2025.
               <br>
               </br>
@@ -439,7 +447,7 @@ const WorldGuitarCompetitionPage = () => {
               </br>
               During the first round of the final stage, the three finalists, selected in alphabetical order, will perform the required piece,
                "<span className="italic">Guitarra Poética</span>" by José Antonio López. In the second round, the finalists will present a free-choice repertoire with a maximum duration 
-               of 20 minutes. The repertoire selection and interpretative approach must align with the competition’s guidelines.
+               of 20 minutes. The repertoire selection and interpretative approach must align with the competition's guidelines.
             </p>
           </section>
         </AnimateOnScroll>

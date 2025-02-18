@@ -57,8 +57,8 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <motion.img
               className="h-12 w-auto cursor-pointer"
-              src={isCompetitionPage ? logo : competitionLogo}
-              alt={isCompetitionPage ? "Festival Mundial" : "World Guitar Competition"}
+              src={isCompetitionPage ? competitionLogo : logo}
+              alt={isCompetitionPage ? "World Guitar Competition" : "Festival Mundial"}
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
               onClick={(e) => scrollToSection(e, "hero")}

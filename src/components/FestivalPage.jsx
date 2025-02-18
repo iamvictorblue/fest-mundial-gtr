@@ -71,6 +71,16 @@ const fadeInRight = {
 const FestivalPage = () => {
   return (
     <div className="min-h-screen bg-[rgb(227,163,83)] text-black pt-16">
+      {/* Background decorative images */}
+      <div 
+        className="fixed top-0 left-0 w-1/4 h-screen opacity-10 bg-contain bg-left bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: `url(${festivalPosterImage})` }}
+      />
+      <div 
+        className="fixed top-0 right-0 w-1/4 h-screen opacity-10 bg-contain bg-right bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: `url(${festivalPosterImage})` }}
+      />
+
       <div className="max-w-6xl mx-auto pt-16 px-4 space-y-32 relative z-10">
         {/* Festival Mundial 2025 Section - Centered */}
         <AnimateOnScroll animation={fadeInUp}>
@@ -118,9 +128,30 @@ const FestivalPage = () => {
                   alt="Simposio Internacional"
                   className="w-full max-w-xl mx-auto rounded-lg shadow-lg mb-4"
                 />
-                <p className="text-gray-700 mt-4">
-                  Aquí va la información del evento:……………………..
-                </p>
+                <div className="text-gray-700 mt-4 text-left space-y-4">
+                  <p>
+                    El Festival Mundial de la Guitarra, Mayagüez 2025 promete ser un evento sin precedentes en 
+                    Puerto Rico, consolidando a la ciudad de Mayagüez en un punto clave para el arte y la cultura a nivel 
+                    internacional. Este festival único en su clase se distingue por ofrecer una experiencia integral que combina 
+                    música, pedagogía y el conocimiento artesanal detrás de la guitarra clásica.
+                  </p>
+                  <p>
+                    El evento contará con una serie de conciertos protagonizados por virtuosos de renombre 
+                    mundial, un Simposio Internacional sobre la construcción de la guitarra clásica, y clases 
+                    magistrales dirigidas a los estudiantes de la Escuela Libre de Música de Mayagüez.
+                  </p>
+                  <p>
+                    En la parte musical, los conciertos incluirán la participación de intérpretes de talla mundial como 
+                    Leonela Alejandro, ganadora del prestigioso GFA 2024, el brasileño Marcus Toscano, y el 
+                    reconocido virtuoso puertorriqueño Iván Rijos, cuya maestría es ampliamente aclamadas en los 
+                    escenarios internacionales.
+                  </p>
+                  <p>
+                    El Festival Mundial de la Guitarra, Mayagüez 2025 se proyecta como un evento que trascenderá 
+                    fronteras, posicionando a Puerto Rico como un referente cultural y artístico en el mundo de la guitarra 
+                    clásica.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
