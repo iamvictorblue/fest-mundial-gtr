@@ -1,0 +1,6 @@
+
+# Redirect festival domain to festival page
+https://festivalmundialdelaguitarra.com/* https://jalworldguitarcompetition.com/ 301!
+
+# Redirect competition domain to competition page
+https://jalworldguitarcompetition.com/* https://jalworldguitarcompetition.com/competition 301!
