@@ -1,8 +1,9 @@
-# Handle SPA routing
-/*    /index.html   200
+# First, handle the competition domain redirect
+/    /competition    301!    Domain=jalworldguitarcompetition.com
+/*    /competition    301!    Domain=jalworldguitarcompetition.com
 
-# Redirect competition domain root to competition page
-/*    /competition   301!   Domain=jalworldguitarcompetition.com
+# Then handle SPA routing for all domains
+/*    /index.html    200
 
 # Handle festival domain
 /*    /             200    Domain=festivalmundialdelaguitarra.com
