@@ -3,7 +3,7 @@
   publish = "dist"
 
 [[redirects]]
-  from = "https://jalworldguitarcompetition.com/*"
+  from = "https://jalworldguitarcompetition.com/"
   to = "https://jalworldguitarcompetition.com/competition"
   status = 301
   force = true
