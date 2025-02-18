@@ -283,7 +283,7 @@ const FestivalPage = () => {
           >
             <div className="max-w-2xl mx-auto">
               <h2 className="text-3xl font-bold mb-8 text-white border-b-2 border-white/20 pb-2 text-center">
-                Festival Mundial de la Guitarra 2024
+                Festival Mundial de la Guitarra 2024 - FMG 2024
               </h2>
               <div className="text-center space-y-8">
                 <img 
@@ -291,6 +291,11 @@ const FestivalPage = () => {
                   alt="Festival Mundial 2024"
                   className="w-full max-w-xl mx-auto rounded-lg shadow-lg mb-4"
                 />
+                <div className="text-white text-lg">
+                  <p>Primer Festival Mundial de la Guitarra</p>
+                  <p>Mayagüez, Puerto Rico</p>
+                  <p>4-7 de mayo de 2024</p>
+                </div>
                 {/* YouTube Embeds */}
                 <div className="space-y-8">
                   {/* Concierto de Finalistas Video */}

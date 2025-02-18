@@ -3,10 +3,10 @@ import festLogo from "../assets/fest copy.png";
 
 const Footer = () => {
   const location = useLocation();
-  const isFestivalPage = location.pathname.includes('festival');
+  const isCompetitionPage = location.pathname.includes('competition');
 
   return (
-    <footer className={`py-6 ${isFestivalPage ? 'bg-[#FF7F50]' : 'bg-[rgb(95,188,215)]'}`}>
+    <footer className={`py-6 ${isCompetitionPage ? 'bg-[rgb(95,188,215)]' : 'bg-[#FF7F50]'}`}>
       <div className="container mx-auto px-4 flex justify-center">
         <img 
           src={festLogo} 
