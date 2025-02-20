@@ -8,6 +8,7 @@ import juryImage2 from "../assets/jury-image-2.png";
 import juryImage3 from "../assets/jury-image-3.png";
 import joseAntonioLopezImage from "../assets/jose-antonio-lopez.png";
 import festLogo from "../assets/fest copy.png";
+import competitionPoster from "../assets/competition_poster_new.jpeg";
 import beachImage from "../assets/beach-image.png";
 import aerialBeachImage from "../assets/aerial-beach-image.png";
 
@@ -122,11 +123,11 @@ const WorldGuitarCompetitionPage = () => {
       {/* Background decorative images */}
       <div 
         className="fixed top-0 left-0 w-1/4 h-screen opacity-10 bg-contain bg-left bg-no-repeat pointer-events-none"
-        style={{ backgroundImage: `url(${competitionImage})` }}
+        style={{ backgroundImage: `url(${competitionPoster})` }}
       />
       <div 
         className="fixed top-0 right-0 w-1/4 h-screen opacity-10 bg-contain bg-right bg-no-repeat pointer-events-none"
-        style={{ backgroundImage: `url(${competitionImage})` }}
+        style={{ backgroundImage: `url(${competitionPoster})` }}
       />
 
       <div className="max-w-6xl mx-auto py-24 px-6 space-y-24 relative z-10">
@@ -140,7 +141,7 @@ const WorldGuitarCompetitionPage = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <img
-                src={competitionImage}
+                src={competitionPoster}
                 alt="World Guitar Competition Poster"
                 className="w-3/4 mx-auto rounded-xl shadow-xl"
               />
@@ -215,7 +216,7 @@ const WorldGuitarCompetitionPage = () => {
             <p className="text-lg md:text-2xl mb-4 font-[500] whitespace-normal break-words
               [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">
               <strong className="font-space-grotesk [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Date: </strong> 
-              <span className="font-bold">Saturday, May 3, 2025.</span>
+              <span className="font-bold">Thurdsay, May 1, 2025.</span>
             </p>
           </section>
         </AnimateOnScroll>

@@ -10,7 +10,8 @@ function App() {
       <Navbar />
       <main className="flex-grow">
         <Routes>
-          <Route path="/*" element={<FestivalPage />} />
+          <Route path="/" element={<WorldGuitarCompetitionPage />} />
+          <Route path="/festival/*" element={<FestivalPage />} />
           <Route path="/competition/*" element={<WorldGuitarCompetitionPage />} />
         </Routes>
       </main>

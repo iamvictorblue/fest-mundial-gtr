@@ -7,7 +7,7 @@ import competitionLogo from "../assets/competition-logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const isCompetitionPage = location.pathname.includes('competition');
+  const isCompetitionPage = location.pathname === '/' || location.pathname.includes('competition');
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -90,7 +90,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             {isCompetitionPage ? (
               <Link
-                to="/"
+                to="/festival"
                 onClick={() => window.scrollTo(0, 0)}
                 className="bg-white text-[#FF7F50] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 text-sm font-[700] shadow-md whitespace-nowrap"
               >
@@ -98,7 +98,7 @@ const Navbar = () => {
               </Link>
             ) : (
               <Link
-                to="/competition"
+                to="/"
                 onClick={() => window.scrollTo(0, 0)}
                 className="bg-white text-[#FF7F50] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 text-sm font-[700] shadow-md whitespace-nowrap"
               >
@@ -154,7 +154,7 @@ const Navbar = () => {
           ))}
           {isCompetitionPage ? (
             <Link
-              to="/"
+              to="/festival"
               onClick={() => {
                 setIsOpen(false);
                 window.scrollTo(0, 0);
@@ -165,7 +165,7 @@ const Navbar = () => {
             </Link>
           ) : (
             <Link
-              to="/competition"
+              to="/"
               onClick={() => {
                 setIsOpen(false);
                 window.scrollTo(0, 0);
