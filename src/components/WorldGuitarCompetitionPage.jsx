@@ -9,6 +9,10 @@ import juryImage3 from "../assets/jury-image-3.png";
 import joseAntonioLopezImage from "../assets/jose-antonio-lopez.png";
 import festLogo from "../assets/fest copy.png";
 import competitionPoster from "../assets/competition_poster_new.jpeg";
+import jalwgcImage1 from "../assets/jalwgc1.jpg";
+import jalwgcImage2 from "../assets/jalwgc2.jpg";
+import jalwgcImage3 from "../assets/jalwgc3.jpg";
+import jalwgcImage4 from "../assets/jalwgc4.jpg";
 import beachImage from "../assets/beach-image.png";
 import aerialBeachImage from "../assets/aerial-beach-image.png";
 
@@ -122,74 +126,88 @@ const WorldGuitarCompetitionPage = () => {
     <div className="min-h-screen font-manrope-regular relative text-white text-base bg-[rgb(115,208,235)]" data-navbar-title="World Guitar Competition">
       {/* Background decorative images */}
       <div 
-        className="fixed top-0 left-0 w-1/4 h-screen opacity-10 bg-contain bg-left bg-no-repeat pointer-events-none"
-        style={{ backgroundImage: `url(${competitionPoster})` }}
-      />
+        className="fixed top-32 left-0 h-[90vh] w-1/4 flex items-center justify-start pointer-events-none z-0"
+      >
+        <img 
+          src={competitionPoster}
+          alt="Competition Banner Left"
+          className="h-[90vh] w-auto object-contain opacity-30"
+        />
+      </div>
       <div 
-        className="fixed top-0 right-0 w-1/4 h-screen opacity-10 bg-contain bg-right bg-no-repeat pointer-events-none"
-        style={{ backgroundImage: `url(${competitionPoster})` }}
-      />
+        className="fixed top-32 right-0 h-[90vh] w-1/4 flex items-center justify-end pointer-events-none z-0"
+      >
+        <img 
+          src={competitionPoster}
+          alt="Competition Banner Right"
+          className="h-[90vh] w-auto object-contain opacity-30"
+        />
+      </div>
 
-      <div className="max-w-6xl mx-auto py-24 px-6 space-y-24 relative z-10">
+      <div className="max-w-[85vw] mx-auto py-24 px-6 space-y-24 relative z-10">
         {/* Hero Section - Full width and centered */}
         <AnimateOnScroll animation={fadeInUp}>
-          <section className="text-center bg-[rgb(115,208,235)]/80 backdrop-blur-xl p-8 rounded-2xl shadow-2xl section-padding transform hover:scale-[1.01] transition-all duration-200 max-w-2xl mx-auto" id="hero">
-            <motion.div 
-              className="max-w-xl mx-auto"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <img
-                src={competitionPoster}
-                alt="World Guitar Competition Poster"
-                className="w-3/4 mx-auto rounded-xl shadow-xl"
-              />
-            </motion.div>
-          </section>
+          <div className="flex justify-center items-center w-full">
+            <section className="text-center bg-[rgb(95,188,215)]/90 backdrop-blur-xl px-6 py-8 rounded-[2rem_0.5rem] shadow-2xl section-padding transform hover:scale-[1.02] hover:shadow-3xl transition-all duration-500 ease-in-out w-auto" id="hero">
+              <motion.div 
+                className="w-auto"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <img
+                  src={competitionPoster}
+                  alt="World Guitar Competition"
+                  className="w-auto h-auto max-h-[70vh] rounded-xl shadow-xl"
+                />
+              </motion.div>
+            </section>
+          </div>
         </AnimateOnScroll>
 
         {/* Description Section */}
         <AnimateOnScroll animation={fadeInLeft}>
           <section 
             id="description" 
-            className="mx-auto max-w-4xl backdrop-blur-xl px-8 py-6 rounded-[2rem_0.5rem] shadow-2xl section-padding relative overflow-hidden transform hover:scale-[1.02] hover:shadow-3xl transition-all duration-500 ease-in-out"
+            className="mx-auto max-w-6xl backdrop-blur-xl px-6 py-8 rounded-[2rem_0.5rem] shadow-2xl section-padding relative overflow-hidden transform hover:scale-[1.02] hover:shadow-3xl transition-all duration-500 ease-in-out"
             style={{
               backgroundImage: `linear-gradient(135deg, rgba(56, 188, 212, 0.95), rgba(14, 149, 173, 0.95))`,
             }}
           >
-            <div className="flex flex-col items-center gap-0 mb-6 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-64 h-64 object-contain -mt-24 -mb-8" />
-              <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
-                font-['Inter'] tracking-[0.2em] leading-relaxed
-                [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
-                border-b-2 border-white/30 pb-2 uppercase w-full">Welcome</h2>
+            <div className="max-w-5xl mx-auto">
+              <div className="flex flex-col items-center gap-0 mb-6 w-full">
+                <img src={festLogo} alt="Festival Logo" className="w-48 h-48 object-contain -mt-24 -mb-8" />
+                <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
+                  font-['Inter'] tracking-[0.2em] leading-relaxed
+                  [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
+                  border-b-2 border-white/30 pb-2 uppercase w-full">Welcome</h2>
+              </div>
+              <p className="text-lg md:text-2xl mb-4 font-[500] whitespace-normal break-words
+                [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
+                The primary objective of the <span className="font-bold italic">José Antonio López World Guitar Competition</span> is to celebrate and reward 
+                artistic expression and musicality in classical guitar performance.
+              </p>
+              <p className="text-lg md:text-2xl mb-4 font-[500] whitespace-normal break-words
+                [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
+                With $16,000 in prizes, the competition aims to inspire guitarists worldwide to revive the lyricism and tonal richness
+                that define classical guitar. It also seeks to rekindle the interpretative styles popularized by legendary figures such 
+                as Julian Bream (England), Alirio Díaz (Venezuela), and Leonardo Egúrbida (Puerto Rico).
+              </p>
+              <p className="text-lg md:text-2xl mb-4 font-[500] whitespace-normal break-words
+                [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
+                The competition will take place as part of the <span className="font-bold"> Festival Mundial de la Guitarra</span>, 
+                a global event celebrating the art of guitar, featuring some of the world's most renowned luthiers. 
+                For the 2025 edition, participants will include Andrea Tacchi (Italy), Gerhard Oldiges (Germany), Gerardo Escobedo (Mexico), 
+                Alberto Martínez from <span className="italic">Orfeo Magazine</span> (Uruguay/Paris), and the distinguished collector José Luis Postigo (Seville, Spain).
+              </p>
+              <p className="text-lg md:text-2xl mb-4 font-[500] whitespace-normal break-words
+                [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
+                The festival's featured concerts will include a performance by GFA winner Leonela Alejandro (Puerto Rico). Additionally, 
+                two <span className="italic">Café Concerts</span> titled "<span className="italic">Guitar Tasting</span>" will be presented, featuring virtuoso guitarists Iván Rijos (Puerto Rico) and 
+                Marcus Toscano (Brazil). To further enrich this grand international gathering, a series of masterclasses conducted by guest artists 
+                will also be offered.
+              </p>
             </div>
-            <p className="text-lg md:text-2xl mb-4 font-[500] whitespace-normal break-words
-              [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The primary objective of the <span className="font-bold italic">José Antonio López World Guitar Competition</span> is to celebrate and reward 
-              artistic expression and musicality in classical guitar performance.
-            </p>
-            <p className="text-lg md:text-2xl mb-4 font-[500] whitespace-normal break-words
-              [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              With $16,000 in prizes, the competition aims to inspire guitarists worldwide to revive the lyricism and tonal richness
-              that define classical guitar. It also seeks to rekindle the interpretative styles popularized by legendary figures such 
-              as Julian Bream (England), Alirio Díaz (Venezuela), and Leonardo Egúrbida (Puerto Rico).
-            </p>
-            <p className="text-lg md:text-2xl mb-4 font-[500] whitespace-normal break-words
-              [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The competition will take place as part of the <span className="font-bold"> Festival Mundial de la Guitarra</span>, 
-              a global event celebrating the art of guitar, featuring some of the world's most renowned luthiers. 
-              For the 2025 edition, participants will include Andrea Tacchi (Italy), Gerhard Oldiges (Germany), Gerardo Escobedo (Mexico), 
-              Alberto Martínez from <span className="italic">Orfeo Magazine</span> (Uruguay/Paris), and the distinguished collector José Luis Postigo (Seville, Spain).
-            </p>
-            <p className="text-lg md:text-2xl mb-4 font-[500] whitespace-normal break-words
-              [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The festival's featured concerts will include a performance by GFA winner Leonela Alejandro (Puerto Rico). Additionally, 
-              two <span className="italic">Café Concerts</span> titled "<span className="italic">Guitar Tasting</span>" will be presented, featuring virtuoso guitarists Iván Rijos (Puerto Rico) and 
-              Marcus Toscano (Brazil). To further enrich this grand international gathering, a series of masterclasses conducted by guest artists 
-              will also be offered.
-            </p>
           </section>
         </AnimateOnScroll>
 
@@ -203,7 +221,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-0 mb-6 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-64 h-64 object-contain -mt-24 -mb-8" />
+              <img src={festLogo} alt="Festival Logo" className="w-48 h-48 object-contain -mt-24 -mb-8" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -231,7 +249,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-0 mb-6 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-64 h-64 object-contain -mt-24 -mb-8" />
+              <img src={festLogo} alt="Festival Logo" className="w-48 h-48 object-contain -mt-24 -mb-8" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -296,7 +314,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-0 mb-6 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-64 h-64 object-contain -mt-24 -mb-8" />
+              <img src={festLogo} alt="Festival Logo" className="w-48 h-48 object-contain -mt-24 -mb-8" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -356,7 +374,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-0 mb-6 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-64 h-64 object-contain -mt-24 -mb-8" />
+              <img src={festLogo} alt="Festival Logo" className="w-48 h-48 object-contain -mt-24 -mb-8" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -379,7 +397,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-0 mb-6 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-64 h-64 object-contain -mt-24 -mb-8" />
+              <img src={festLogo} alt="Festival Logo" className="w-48 h-48 object-contain -mt-24 -mb-8" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -418,7 +436,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-0 mb-6 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-64 h-64 object-contain -mt-24 -mb-8" />
+              <img src={festLogo} alt="Festival Logo" className="w-48 h-48 object-contain -mt-24 -mb-8" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -448,7 +466,7 @@ const WorldGuitarCompetitionPage = () => {
             }}
           >
             <div className="flex flex-col items-center gap-0 mb-6 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-64 h-64 object-contain -mt-24 -mb-8" />
+              <img src={festLogo} alt="Festival Logo" className="w-48 h-48 object-contain -mt-24 -mb-8" />
               <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                 font-['Inter'] tracking-[0.2em] leading-relaxed
                 [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
@@ -480,82 +498,74 @@ const WorldGuitarCompetitionPage = () => {
         <AnimateOnScroll animation={fadeInRight}>
           <section 
             id="jury" 
-            className="mx-auto max-w-4xl backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl section-padding relative overflow-hidden transform"
+            className="mx-auto max-w-6xl backdrop-blur-xl px-6 py-8 rounded-[2rem_0.5rem] shadow-2xl section-padding relative overflow-hidden transform hover:scale-[1.02] hover:shadow-3xl transition-all duration-500 ease-in-out"
             style={{
               backgroundImage: `linear-gradient(-75deg, rgba(56, 188, 212, 0.95), rgba(18, 153, 173, 0.95))`,
             }}
           >
-            <div className="flex flex-col items-center gap-0 mb-6 w-full">
-              <img src={festLogo} alt="Festival Logo" className="w-64 h-64 object-contain -mt-24 -mb-8" />
-              <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
-                font-['Inter'] tracking-[0.2em] leading-relaxed
-                [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
-                border-b-2 border-white/30 pb-2 uppercase w-full">International Jury</h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-9">
-              <motion.div 
-                className="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-xl"
-                whileHover={{ 
-                  scale: 1.05,
-                  rotateY: 5,
-                  transition: { duration: 0.3 }
-                }}
-              >
-                <div className="flex flex-col items-center">
-                  <motion.div 
-                    className="w-full aspect-square overflow-hidden rounded-lg shadow-lg mb-4"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <img 
-                      src={juryImage2} 
-                      alt="Alfredo Minetti and Richard Scofano" 
-                      className="w-full h-full object-cover object-center"
-                    />
-                  </motion.div>
-                  <h3 className="text-xl font-[700] text-center 
-                    [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Alfredo Minetti and Richard Scofano</h3>
-                  <p className="text-center text-gray-300">Pianist (Uruguay) and Composer/Bandoneonist (Argentina)</p>
+            <div className="max-w-5xl mx-auto">
+              <div className="flex flex-col items-center gap-0 mb-6 w-full">
+                <img src={festLogo} alt="Festival Logo" className="w-48 h-48 object-contain -mt-24 -mb-8" />
+                <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
+                  font-['Inter'] tracking-[0.2em] leading-relaxed
+                  [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]
+                  border-b-2 border-white/30 pb-2 uppercase w-full">International Jury</h2>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-9">
+                <div className="text-center">
+                  <img 
+                    src={jalwgcImage1} 
+                    alt="Richard Scofano" 
+                    className="w-full rounded-lg shadow-lg mb-4"
+                  />
+                  <h3 className="text-xl font-[700] 
+                    [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Richard Scofano</h3>
+                  <p className="text-lg md:text-xl text-gray-300">Composer/Bandoneonist (Argentina)</p>
                 </div>
-              </motion.div>
-              <motion.div 
-                className="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-xl"
-                whileHover={{ 
-                  scale: 1.05,
-                  rotateY: 5,
-                  transition: { duration: 0.3 }
-                }}
-              >
-                <div className="flex flex-col items-center">
-                  <motion.div 
-                    className="w-full aspect-square overflow-hidden rounded-lg shadow-lg mb-4"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <img 
-                      src={juryImage3} 
-                      alt="Alberto and Pablo Martos" 
-                      className="w-full h-full object-cover object-center"
-                    />
-                  </motion.div>
-                  <h3 className="text-xl font-[700] text-center 
-                    [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Alberto and Pablo Martos</h3>
-                  <p className="text-center text-gray-300">Cellist and Violinist (Spain)</p>
+                <div className="text-center">
+                  <img 
+                    src={jalwgcImage2} 
+                    alt="Alfredo Minetti" 
+                    className="w-full rounded-lg shadow-lg mb-4"
+                  />
+                  <h3 className="text-xl font-[700] 
+                    [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Alfredo Minetti</h3>
+                  <p className="text-lg md:text-xl text-gray-300">Pianist (Portugal)</p>
                 </div>
-              </motion.div>
+                <div className="text-center">
+                  <img 
+                    src={jalwgcImage3} 
+                    alt="Pablo Martos" 
+                    className="w-full rounded-lg shadow-lg mb-4"
+                  />
+                  <h3 className="text-xl font-[700] 
+                    [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Pablo Martos</h3>
+                  <p className="text-lg md:text-xl text-gray-300">Violinist (Granada, Spain)</p>
+                </div>
+                <div className="text-center">
+                  <img 
+                    src={jalwgcImage4} 
+                    alt="Alberto Martos" 
+                    className="w-full rounded-lg shadow-lg mb-4"
+                  />
+                  <h3 className="text-xl font-[700] 
+                    [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Alberto Martos</h3>
+                  <p className="text-lg md:text-xl text-gray-300">Cellist (Granada, Spain)</p>
+                </div>
+              </div>
+              <p className="text-lg md:text-2xl mt-8 mb-4 font-[500] whitespace-normal break-words
+                [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
+                The <span className="font-bold italic">José Antonio López World Guitar Competition</span> has appointed renowned artists from the international music scene 
+                as members of the jury. The distinguished panel includes Pablo Martos (violinist) and Alberto Martos (cellist) from Spain, 
+                Alfredo Minetti (pianist) from Portugal, and Richard Scofano (composer and bandoneonist) from Argentina.
+                <br>
+                </br>
+                <br>
+                </br>
+                (It is important to note that the jury members will follow the competition from their respective countries via a live broadcast on YouTube.)
+              </p>
             </div>
-            <p className="text-lg md:text-2xl mt-8 mb-4 font-[500] whitespace-normal break-words
-              [text-shadow:_1px_1px_1px_rgb(0_0_0_/_30%)] mix-blend-luminosity">
-              The <span className="font-bold italic">José Antonio López World Guitar Competition</span> has appointed renowned artists from the international music scene 
-              as members of the jury. The distinguished panel includes Pablo Martos (violinist) and Alberto Martos (cellist) from Spain, 
-              Alfredo Minetti (pianist) from Uruguay, and Richard Scofano (composer and bandoneonist) from Argentina.
-              <br>
-              </br>
-              <br>
-              </br>
-              (It is important to note that the jury members will follow the competition from their respective countries via a live broadcast on YouTube.)
-            </p>
           </section>
         </AnimateOnScroll>
 
@@ -571,7 +581,7 @@ const WorldGuitarCompetitionPage = () => {
             <div className="grid md:grid-cols-[2fr,1fr] gap-8 items-center">
               <div className="order-2 md:order-1">
                 <div className="flex flex-col items-center gap-0 mb-6 w-full">
-                  <img src={festLogo} alt="Festival Logo" className="w-64 h-64 object-contain -mt-24 -mb-8" />
+                  <img src={festLogo} alt="Festival Logo" className="w-48 h-48 object-contain -mt-24 -mb-8" />
                   <h2 className="text-2xl md:text-3xl font-[600] text-white text-center
                     font-['Inter'] tracking-[0.2em] leading-relaxed
                     [text-shadow:_2px_2px_4px_rgb(0_0_0_/_30%)]

@@ -7,7 +7,7 @@ import competitionLogo from "../assets/competition-logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const isCompetitionPage = location.pathname === '/' || location.pathname.includes('competition');
+  const isCompetitionPage = location.pathname.includes('competition');
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -33,6 +33,7 @@ const Navbar = () => {
     { href: "#simposio", label: "Simposio Internacional" },
     { href: "#concurso-nacional", label: "Concurso Nacional" },
     { href: "#conciertos", label: "Conciertos" },
+    { href: "#calendario", label: "Calendario De Eventos" },
     { href: "#festival-2024", label: "Festival Mundial 2024" },
   ];
 
@@ -98,7 +99,7 @@ const Navbar = () => {
               </Link>
             ) : (
               <Link
-                to="/"
+                to="/competition"
                 onClick={() => window.scrollTo(0, 0)}
                 className="bg-white text-[#FF7F50] py-2 px-4 rounded-md hover:bg-opacity-90 transition-all duration-300 text-sm font-[700] shadow-md whitespace-nowrap"
               >
@@ -145,7 +146,7 @@ const Navbar = () => {
               className={`block px-3 py-2 rounded-md text-base font-[500] ${
                 isCompetitionPage 
                   ? 'text-white hover:bg-white hover:text-[rgb(95,188,215)]' 
-                  : 'text-[#FFD700] hover:bg-[#FFD700] hover:text-black'
+                  : 'text-white hover:bg-white hover:text-[#FF7F50]'
               } transition-all duration-200`}
               whileHover={{ x: 10 }}
             >
@@ -165,7 +166,7 @@ const Navbar = () => {
             </Link>
           ) : (
             <Link
-              to="/"
+              to="/competition"
               onClick={() => {
                 setIsOpen(false);
                 window.scrollTo(0, 0);
